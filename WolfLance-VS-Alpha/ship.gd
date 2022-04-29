@@ -22,7 +22,8 @@ onready var animationPlayer = $AnimationPlayer
 
 
 func _ready():
-	pass
+	$DodgeEffect.set_emitting(false)
+	$BoostEffect.set_emitting(false)
 
 
 
@@ -35,6 +36,9 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	self.transform.origin.x = clamp(self.transform.origin.x, left_boundry,right_boundry)
 	self.transform.origin.y = clamp(self.transform.origin.y, down_boundry, up_boundry)
+	
+	if is_rolling == true:
+		$DodgeEffect.set_emitting(true)
 	
 	if is_rolling == false:
 		velocity.x = input_vector.x * ship_speed * delta
@@ -51,6 +55,10 @@ func _physics_process(delta):
 		
 		translate_object_local(velocity)
 		
+	if Input.get_action_strength("boosting")>=1:
+		$BoostEffect.set_emitting(true)
+	else:
+		$BoostEffect.set_emitting(false)
 	
 
 func _input(event):
@@ -81,3 +89,4 @@ func _on_Cooldown_timeout():
 
 func _on_rollTimer_timeout():
 	is_rolling = false
+	$DodgeEffect.set_emitting(false)
