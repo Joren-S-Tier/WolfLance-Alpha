@@ -5,8 +5,9 @@ extends PathFollow
 #onready var ship = $railcart/ship
 #onready var camera = $railcart/Camera
 #onready var position3D = $railcart/Position3D
-var cartspeed = 250
+export var cartspeed = 250
 var boost = 3
+
 
 
 func _ready():
@@ -22,3 +23,6 @@ func _physics_process(delta):
 	else:
 		self.offset += delta * cartspeed
 	
+
+
+
