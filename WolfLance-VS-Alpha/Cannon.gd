@@ -24,7 +24,7 @@ func _input(event):
 			elif mouse_is_down:
 				mouse_is_down = false
 				
-				rotate_cannon(event.position)
+				#rotate_cannon(event.position)
 				
 				var new_cannon_ball = cannonball.instance()
 				$cannonballs.add_child(new_cannon_ball)
