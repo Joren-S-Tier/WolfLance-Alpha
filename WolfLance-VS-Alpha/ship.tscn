@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://PlayerStats.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cannon Placeholder.tres" type="CubeMesh" id=12]
 [ext_resource path="res://image0018.png" type="Texture" id=13]
+[ext_resource path="res://ShipMesh.gd" type="Script" id=14]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -64,12 +65,13 @@ mesh = ExtResource( 5 )
 material/0 = ExtResource( 3 )
 material/1 = ExtResource( 4 )
 material/2 = ExtResource( 2 )
+script = ExtResource( 14 )
 
 [node name="aimingReticule" parent="ShipMesh" instance=ExtResource( 10 )]
 transform = Transform( -5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 0.194139, -9.41285, 102.402 )
 modulate = Color( 0, 0, 0, 1 )
 pixel_size = 0.05
-aiming_speed = 100
+aiming_speed = 50
 
 [node name="Cannon" type="MeshInstance" parent="ShipMesh"]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -9.68687, 9.85047 )
@@ -126,6 +128,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0 )
 
 [node name="cannonFireSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
 stream = ExtResource( 8 )
+volume_db = -9.613
 
 [node name="player hurtbox" type="CollisionShape" parent="."]
 transform = Transform( -3.61436, -0.0864394, 7.14859e-07, -0.0626575, 2.61995, 5.47769e-09, -7.783e-07, -5.49521e-09, -6.27438, -1.76993e-07, -4.45947, 2.78408 )

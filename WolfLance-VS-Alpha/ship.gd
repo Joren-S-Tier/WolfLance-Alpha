@@ -8,10 +8,14 @@ export var roll_speed = 10
 var velocity = Vector3.ZERO
 onready var railcart = get_node("/root/main/rail/railcart")
 onready var cannon = get_node("/root/main/rail/railcart/ship/ShipMesh/Cannon")
+onready var ShipMesh = get_node("/root/main/rail/railcart/ship/ShipMesh")
+onready var ShipOrient = get_node("/root/main/rail/railcart/ShipOrient")
 var right_boundry = 50
 var left_boundry = -50
 var down_boundry = -50
 var up_boundry = 50
+var forward_boundry = -5
+var backward_boundry = 5
 var input_vector = Vector3.ZERO
 var down_position = Vector2(0.0, 0.0)
 
@@ -39,7 +43,8 @@ func _ready():
 func _physics_process(delta):
 	
 	PlayerStats.set_health(current_health)
-	
+	ShipMesh.look_at(ShipOrient.global_transform.origin,Vector3.UP)
+	ShipMesh.rotate_object_local(Vector3(0,1,0), 3.14)
 	#print (self.translation.x)
 	#self.get_position() = clamp(global_position.x, left_boundry.position.x, right_boundry.position.x)
 	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
@@ -47,6 +52,7 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	self.transform.origin.x = clamp(self.transform.origin.x, left_boundry,right_boundry)
 	self.transform.origin.y = clamp(self.transform.origin.y, down_boundry, up_boundry)
+	#self.transform.origin.z = clamp(self.transform.origin.y, forward_boundry, backward_boundry)
 	
 	if is_rolling == true:
 		$DodgeEffect.set_emitting(true)
@@ -64,7 +70,7 @@ func _physics_process(delta):
 		animationPlayer.play("roll")
 	else:
 		
-		translate_object_local(velocity)
+		translate(velocity)
 		
 	if Input.get_action_strength("boosting")>=1:
 		$BoostEffect.set_emitting(true)

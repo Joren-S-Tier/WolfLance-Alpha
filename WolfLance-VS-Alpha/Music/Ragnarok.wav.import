@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ragnarok.wav-97a95df85eb002dbb7d9f95d9d8c5cc6.sample"
+
+[deps]
+
+source_file="res://Music/Ragnarok.wav"
+dest_files=[ "res://.import/Ragnarok.wav-97a95df85eb002dbb7d9f95d9d8c5cc6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
