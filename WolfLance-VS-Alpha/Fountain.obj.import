@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Fountain.obj-e8d859088d1efaaf0939e84346089bf9.mesh"
+
+[deps]
+
+files=[ "res://.import/Fountain.obj-e8d859088d1efaaf0939e84346089bf9.mesh" ]
+
+source_file="res://Fountain.obj"
+dest_files=[ "res://.import/Fountain.obj-e8d859088d1efaaf0939e84346089bf9.mesh", "res://.import/Fountain.obj-e8d859088d1efaaf0939e84346089bf9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

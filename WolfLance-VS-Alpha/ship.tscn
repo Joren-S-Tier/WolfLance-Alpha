@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
@@ -7,12 +7,16 @@
 [ext_resource path="res://spearship.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://cannonball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://roll.tres" type="Animation" id=7]
-[ext_resource path="res://cannon_fire.wav" type="AudioStream" id=8]
+[ext_resource path="res://shot.wav" type="AudioStream" id=8]
 [ext_resource path="res://ShipCannon.gd" type="Script" id=9]
 [ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=10]
 [ext_resource path="res://PlayerStats.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cannon Placeholder.tres" type="CubeMesh" id=12]
 [ext_resource path="res://image0018.png" type="Texture" id=13]
+[ext_resource path="res://hit.wav" type="AudioStream" id=14]
+[ext_resource path="res://dodge_boost.wav" type="AudioStream" id=15]
+[ext_resource path="res://boost.wav" type="AudioStream" id=16]
+[ext_resource path="res://Shepard_Tone_Boost.mp3" type="AudioStream" id=17]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -126,6 +130,23 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0 )
 
 [node name="cannonFireSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
 stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="playerHitSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 14 )
+volume_db = -10.0
+
+[node name="dodgeBoostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 15 )
+volume_db = -10.0
+
+[node name="boostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 16 )
+volume_db = -10.0
+
+[node name="continousBoostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 17 )
+volume_db = -10.0
 
 [node name="player hurtbox" type="CollisionShape" parent="."]
 transform = Transform( -3.61436, -0.0864394, 7.14859e-07, -0.0626575, 2.61995, 5.47769e-09, -7.783e-07, -5.49521e-09, -6.27438, -1.76993e-07, -4.45947, 2.78408 )
@@ -138,3 +159,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.73267, -27.3446 )
 
 [connection signal="timeout" from="cannonballCooldown" to="." method="_on_Cooldown_timeout"]
 [connection signal="timeout" from="rollTimer" to="." method="_on_rollTimer_timeout"]
+[connection signal="finished" from="audioPlayers/boostSoundMaker" to="." method="_on_boostSoundMaker_finished"]
