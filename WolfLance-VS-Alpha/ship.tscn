@@ -142,7 +142,7 @@ volume_db = -10.0
 
 [node name="boostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
 stream = ExtResource( 16 )
-volume_db = -10.0
+volume_db = -15.0
 
 [node name="continousBoostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
 stream = ExtResource( 17 )

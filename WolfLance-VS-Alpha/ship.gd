@@ -86,6 +86,7 @@ func startBoostFX():
 	$BoostEffect.set_emitting(true)
 	if boostSoundPlayer.is_playing() == false && first_boost == true:
 		boostSoundPlayer.play()
+		longBoostPlayer.play()
 
 func stopBoostFX():
 	$BoostEffect.set_emitting(false)
@@ -135,6 +136,5 @@ func shoot():
 
 
 func _on_boostSoundMaker_finished():
-	print ("1")
-	longBoostPlayer.play()
 	first_boost = false
+
