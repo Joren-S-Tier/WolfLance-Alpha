@@ -659,13 +659,26 @@ transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 662.884, 28.0031, -1620.01 
 [node name="Control" parent="." instance=ExtResource( 6 )]
 
 [node name="BasicEnemy" parent="." instance=ExtResource( 9 )]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -287.147, 15.9918, -2748.63 )
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -11.7816, 15.9918, -945.854 )
+speed = 15
+
+[node name="BasicEnemy2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 74.825, 88.0898, -1153.24 )
+speed = 15
+
+[node name="BasicEnemy3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -46.6238, 88.0898, -1585.77 )
+speed = 15
+
+[node name="BasicEnemy4" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 700.142, 88.0898, -1585.77 )
+speed = 15
 
 [node name="Spatial" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.197, -21.7846, -514.39 )
 
 [node name="BasicRangedEnemy" parent="." instance=ExtResource( 11 )]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -41.8632, 102.586, -1475.31 )
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -41.8632, 102.586, -3674.46 )
 
 [connection signal="tree_entered" from="rail" to="rail/railcart/ship" method="_on_rail_tree_entered"]
 [connection signal="finished" from="rail/railcart/musicBox" to="rail/railcart" method="_on_musicBox_finished"]
