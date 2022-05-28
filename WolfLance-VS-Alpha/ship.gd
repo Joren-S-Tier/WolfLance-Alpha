@@ -84,6 +84,8 @@ func _physics_process(delta):
 func dodgeRoll():
 	translate_object_local(velocity * roll_speed)
 	is_rolling = true
+	$ShipMesh/Cannon/reticule1.visible = false
+	$ShipMesh/Cannon/reticule2.visible = false
 	$rollTimer.start(.12)
 	animationPlayer.play("roll")
 
@@ -108,6 +110,8 @@ func _on_Cooldown_timeout():
 
 func _on_rollTimer_timeout():
 	is_rolling = false
+	$ShipMesh/Cannon/reticule1.visible = true
+	$ShipMesh/Cannon/reticule2.visible = true
 	$DodgeEffect.set_emitting(false)
 
 func player_takes_damage(damage):

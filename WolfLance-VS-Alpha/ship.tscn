@@ -63,6 +63,12 @@ ship_speed = 20
 cannonball = ExtResource( 6 )
 shoot_strength = 1500
 
+[node name="aimingReticule" parent="." instance=ExtResource( 10 )]
+transform = Transform( 5, 0, 3.17865e-07, 0, 5, 0, -3.17865e-07, 0, 5, -0.19413, -9.41285, -102.402 )
+modulate = Color( 0, 0, 0, 1 )
+pixel_size = 0.05
+aiming_speed = 50
+
 [node name="ShipMesh" type="MeshInstance" parent="."]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0 )
 mesh = ExtResource( 5 )
@@ -71,18 +77,12 @@ material/1 = ExtResource( 4 )
 material/2 = ExtResource( 2 )
 script = ExtResource( 14 )
 
-[node name="aimingReticule" parent="ShipMesh" instance=ExtResource( 10 )]
-transform = Transform( -5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, 0.194139, -9.41285, 102.402 )
-modulate = Color( 0, 0, 0, 1 )
-pixel_size = 0.05
-aiming_speed = 50
-
 [node name="Cannon" type="MeshInstance" parent="ShipMesh"]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -9.68687, 9.85047 )
 mesh = ExtResource( 12 )
 material/0 = null
 script = ExtResource( 9 )
-target_scene = NodePath("../aimingReticule")
+target_scene = NodePath("../../aimingReticule")
 
 [node name="CannonBallSpawn" type="Position3D" parent="ShipMesh/Cannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0441799, 0.0375462, -2.33149 )
