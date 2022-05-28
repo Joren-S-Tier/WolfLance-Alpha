@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://cannonball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://static target.tscn" type="PackedScene" id=2]
@@ -6,10 +6,10 @@
 [ext_resource path="res://ship.tscn" type="PackedScene" id=4]
 [ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Music/Ragnorak_1.tres" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Ragnarok.wav" type="AudioStream" id=7]
 [ext_resource path="res://musicBox.gd" type="Script" id=8]
-[ext_resource path="res://RailOrient.gd" type="Script" id=9]
-[ext_resource path="res://Position3D.gd" type="Script" id=10]
+[ext_resource path="res://Basic Enemy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://fountain.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -688,6 +688,25 @@ transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 444.999, 47.0908, -1555.34 
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 662.884, 28.0031, -1620.01 )
 
 [node name="Control" parent="." instance=ExtResource( 6 )]
+
+[node name="BasicEnemy" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -11.7816, 15.9918, -945.854 )
+speed = 15
+
+[node name="BasicEnemy2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 74.825, 88.0898, -1153.24 )
+speed = 15
+
+[node name="BasicEnemy3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -46.6238, 88.0898, -1585.77 )
+speed = 15
+
+[node name="BasicEnemy4" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 700.142, 88.0898, -1585.77 )
+speed = 15
+
+[node name="Spatial" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.197, -21.7846, -514.39 )
 
 [connection signal="tree_entered" from="rail" to="rail/railcart/ship" method="_on_rail_tree_entered"]
 [connection signal="finished" from="rail/railcart/musicBox" to="rail/railcart" method="_on_musicBox_finished"]

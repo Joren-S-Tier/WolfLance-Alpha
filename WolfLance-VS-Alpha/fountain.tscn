@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fountain2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://atlas fountain.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="Skin" id=1]
+resource_local_to_scene = true
+
+[node name="fountain" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+material_override = SubResource( 2 )
+mesh = ExtResource( 1 )
+skin = SubResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+material/18 = null
+material/19 = null

@@ -19,6 +19,8 @@ var backward_boundry = 5
 var input_vector = Vector3.ZERO
 var down_position = Vector2(0.0, 0.0)
 
+var first_boost = true
+
 #onready var playerStats = get_node("PlayerStats")
 
 export (PackedScene) var cannonball = null
@@ -29,7 +31,10 @@ var mouse_is_down = false
 var is_rolling = false
 onready var animationPlayer = $AnimationPlayer
 onready var cannonFireAudioPlayer = $audioPlayers/cannonFireSoundMaker
-
+onready var playerHitAudioPlayer = $audioPlayers/playerHitSoundMaker
+onready var dodgeBoostSoundPlayer = $audioPlayers/dodgeBoostSoundMaker
+onready var boostSoundPlayer = $audioPlayers/boostSoundMaker
+onready var longBoostPlayer = $audioPlayers/continousBoostSoundMaker
 signal health_changed(value)
 
 func _ready():
@@ -56,32 +61,44 @@ func _physics_process(delta):
 	
 	if is_rolling == true:
 		$DodgeEffect.set_emitting(true)
+		if dodgeBoostSoundPlayer.is_playing() == false:
+			dodgeBoostSoundPlayer.play()
 	
 	if is_rolling == false:
 		velocity.x = input_vector.x * ship_speed * delta
 		velocity.y = input_vector.y * ship_speed * delta 
 	
 	if Input.get_action_strength("dodge roll")>=1:
-		
-		translate_object_local(velocity * roll_speed)
-		
-		is_rolling = true
-		$rollTimer.start(.12)
-		animationPlayer.play("roll")
+		dodgeRoll()
 	else:
 		
 		translate(velocity)
 		
 	if Input.get_action_strength("boosting")>=1:
-		$BoostEffect.set_emitting(true)
+		startBoostFX()
 	else:
-		$BoostEffect.set_emitting(false)
-	
+		stopBoostFX()
 	if Input.get_action_strength("shoot"):
 		shoot()
 
+func dodgeRoll():
+	translate_object_local(velocity * roll_speed)
+	is_rolling = true
+	$rollTimer.start(.12)
+	animationPlayer.play("roll")
 
 
+func startBoostFX():
+	$BoostEffect.set_emitting(true)
+	if boostSoundPlayer.is_playing() == false && first_boost == true:
+		boostSoundPlayer.play()
+		longBoostPlayer.play()
+
+func stopBoostFX():
+	$BoostEffect.set_emitting(false)
+	boostSoundPlayer.stop()
+	longBoostPlayer.stop()
+	first_boost = true
 
 func _on_Cooldown_timeout():
 	can_shoot = true
@@ -97,6 +114,7 @@ func player_takes_damage(damage):
 	print("Player hit")
 	current_health -= damage
 	PlayerStats.set_health(current_health)
+	playerHitAudioPlayer.play()
 	
 #	emit_signal("health_changed", current_health)
 #	if current_health<=0:
@@ -112,7 +130,6 @@ func shoot():
 		var rnr = railcart.transform.basis.z
 		var new_cannon_ball = cannonball.instance()
 		$cannonballs.add_child(new_cannon_ball)
-		
 		new_cannon_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
 		print ("cannon Basis.Z=", cnr)
 		print ("RailCart Basis.Z=", rnr)
@@ -122,3 +139,8 @@ func shoot():
 		cannonFireAudioPlayer.play()
 		can_shoot = false
 		$cannonballCooldown.start()
+
+
+func _on_boostSoundMaker_finished():
+	first_boost = false
+
