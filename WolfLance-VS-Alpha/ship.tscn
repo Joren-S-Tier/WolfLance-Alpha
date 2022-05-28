@@ -121,7 +121,7 @@ draw_pass_1 = SubResource( 4 )
 [node name="BoostEffect" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.09436, 13.7972 )
 amount = 100
-lifetime = 0.5
+lifetime = 0.15
 local_coords = false
 process_material = SubResource( 5 )
 draw_pass_1 = SubResource( 6 )
