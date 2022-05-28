@@ -21,6 +21,9 @@ margin_left = 69.0
 margin_top = 384.0
 margin_right = 402.0
 margin_bottom = 428.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 margin_left = 68.0

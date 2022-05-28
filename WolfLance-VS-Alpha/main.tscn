@@ -6,7 +6,7 @@
 [ext_resource path="res://ship.tscn" type="PackedScene" id=4]
 [ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=6]
-[ext_resource path="res://.import/Ragnarok.wav-97a95df85eb002dbb7d9f95d9d8c5cc6.sample" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Ragnarok.wav" type="AudioStream" id=7]
 [ext_resource path="res://musicBox.gd" type="Script" id=8]
 [ext_resource path="res://Basic Enemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://fountain.tscn" type="PackedScene" id=10]
