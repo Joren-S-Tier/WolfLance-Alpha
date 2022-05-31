@@ -22,12 +22,25 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func take_damage(damage):
+	health -=damage
+	if (health<=0):
+		queue_free()
 
 func _on_Area_body_entered(body):
 	if(body.is_in_group("Player")):
 		body.player_takes_damage(attack)
-	print ("hit")
-	queue_free()
+	if(body.is_in_group("Projectile")):
+		take_damage(1)
+		print ("hit")
+	
+	if(body.is_in_group("Bomb")):
+		body.explode()
+	
+	if(health <=0):
+		queue_free()
+	#print ("hit")
+	#queue_free()
 	
 func _physics_process(delta):
 	if target != null:

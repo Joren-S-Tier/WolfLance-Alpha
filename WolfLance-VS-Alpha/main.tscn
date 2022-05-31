@@ -692,6 +692,21 @@ transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 64.2949, 40.2699, -1495.06 
 [node name="static target3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 248.407, 19.3488, -1616.37 )
 
+[node name="static target8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 1162.5, 19.3488, -1616.37 )
+
+[node name="static target10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 1162.5, 19.3488, -1672.98 )
+
+[node name="static target9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 1162.5, 19.3488, -1555.55 )
+
+[node name="static target6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 248.407, 19.3488, -1572.46 )
+
+[node name="static target7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 248.407, 19.3488, -1661.69 )
+
 [node name="static target4" parent="." instance=ExtResource( 2 )]
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 444.999, 47.0908, -1555.34 )
 

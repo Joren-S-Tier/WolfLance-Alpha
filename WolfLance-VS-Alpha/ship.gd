@@ -24,6 +24,7 @@ var first_boost = true
 #onready var playerStats = get_node("PlayerStats")
 
 export (PackedScene) var cannonball = null
+export (PackedScene) var bomb = null
 export var shoot_strength = 750
 var can_shoot = true
 var mouse_is_down = false
@@ -80,6 +81,8 @@ func _physics_process(delta):
 		stopBoostFX()
 	if Input.get_action_strength("shoot"):
 		shoot()
+	if Input.get_action_strength("bomb"):
+		shoot_bomb()
 
 func dodgeRoll():
 	translate_object_local(velocity * roll_speed)
@@ -148,3 +151,18 @@ func shoot():
 func _on_boostSoundMaker_finished():
 	first_boost = false
 
+func shoot_bomb():
+	if can_shoot:
+		var cnr = cannon.global_transform.basis.z
+		var rnr = railcart.transform.basis.z
+		var new_bomb = bomb.instance()
+		$cannonballs.add_child(new_bomb)
+		new_bomb.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+		print ("cannon Basis.Z=", cnr)
+		print ("RailCart Basis.Z=", rnr)
+		var vectorProduct = cnr * -1
+		print ("Vector Product=", vectorProduct)
+		new_bomb.linear_velocity = vectorProduct * shoot_strength
+		cannonFireAudioPlayer.play()
+		can_shoot = false
+		$cannonballCooldown.start()
