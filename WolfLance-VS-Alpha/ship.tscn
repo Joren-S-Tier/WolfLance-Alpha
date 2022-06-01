@@ -20,21 +20,6 @@
 [ext_resource path="res://Pause.gd" type="Script" id=18]
 [ext_resource path="res://bomb.tscn" type="PackedScene" id=19]
 
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("ShipMesh:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, -180, 0 ) ]
-}
-
 [sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 5
 emission_ring_radius = 8.0
@@ -52,6 +37,21 @@ emission_box_extents = Vector3( 1, 1, 1 )
 gravity = Vector3( 0, -1, 0 )
 
 [sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShipMesh:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -180, 0 ) ]
+}
 
 [sub_resource type="BoxShape" id=7]
 
@@ -101,6 +101,24 @@ modulate = Color( 0.768627, 0.0313726, 0.0313726, 1 )
 pixel_size = 0.02
 texture = ExtResource( 13 )
 
+[node name="DodgeEffect" type="Particles" parent="ShipMesh"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+amount = 60
+lifetime = 0.2
+explosiveness = 0.54
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="BoostEffect" type="Particles" parent="ShipMesh"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.20619e-06, -5.09436, -13.7972 )
+amount = 100
+lifetime = 0.15
+local_coords = false
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 6 )
+
 [node name="cannonballs" type="Node2D" parent="."]
 
 [node name="cannonballCooldown" type="Timer" parent="."]
@@ -111,23 +129,6 @@ wait_time = 0.5
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/roll = ExtResource( 7 )
-
-[node name="DodgeEffect" type="Particles" parent="."]
-amount = 60
-lifetime = 0.2
-explosiveness = 0.54
-randomness = 1.0
-local_coords = false
-process_material = SubResource( 3 )
-draw_pass_1 = SubResource( 4 )
-
-[node name="BoostEffect" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.09436, 13.7972 )
-amount = 100
-lifetime = 0.15
-local_coords = false
-process_material = SubResource( 5 )
-draw_pass_1 = SubResource( 6 )
 
 [node name="audioPlayers" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0 )

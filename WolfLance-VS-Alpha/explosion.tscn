@@ -11,6 +11,7 @@ radius = 20.5374
 albedo_color = Color( 1, 0.635294, 0.0588235, 1 )
 
 [node name="explosion" type="Area" groups=["Projectile"]]
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

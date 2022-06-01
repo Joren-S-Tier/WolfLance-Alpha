@@ -10,6 +10,8 @@ onready var railcart = get_node("/root/main/rail/railcart")
 onready var cannon = get_node("/root/main/rail/railcart/ship/ShipMesh/Cannon")
 onready var ShipMesh = get_node("/root/main/rail/railcart/ship/ShipMesh")
 onready var ShipOrient = get_node("/root/main/rail/railcart/ShipOrient")
+onready var bEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/BoostEffect")
+onready var dEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/DodgeEffect")
 var right_boundry = 50
 var left_boundry = -50
 var down_boundry = -50
@@ -39,8 +41,8 @@ onready var longBoostPlayer = $audioPlayers/continousBoostSoundMaker
 signal health_changed(value)
 
 func _ready():
-	$DodgeEffect.set_emitting(false)
-	$BoostEffect.set_emitting(false)
+	dEmitter.set_emitting(false)
+	bEmitter.set_emitting(false)
 	PlayerStats.set_max_health(max_health)
 	
 
@@ -61,7 +63,7 @@ func _physics_process(delta):
 	#self.transform.origin.z = clamp(self.transform.origin.y, forward_boundry, backward_boundry)
 	
 	if is_rolling == true:
-		$DodgeEffect.set_emitting(true)
+		dEmitter.set_emitting(true)
 		if dodgeBoostSoundPlayer.is_playing() == false:
 			dodgeBoostSoundPlayer.play()
 	
@@ -94,13 +96,13 @@ func dodgeRoll():
 
 
 func startBoostFX():
-	$BoostEffect.set_emitting(true)
+	bEmitter.set_emitting(true)
 	if boostSoundPlayer.is_playing() == false && first_boost == true:
 		boostSoundPlayer.play()
 		longBoostPlayer.play()
 
 func stopBoostFX():
-	$BoostEffect.set_emitting(false)
+	bEmitter.set_emitting(false)
 	boostSoundPlayer.stop()
 	longBoostPlayer.stop()
 	first_boost = true
@@ -115,7 +117,7 @@ func _on_rollTimer_timeout():
 	is_rolling = false
 	$ShipMesh/Cannon/reticule1.visible = true
 	$ShipMesh/Cannon/reticule2.visible = true
-	$DodgeEffect.set_emitting(false)
+	dEmitter.set_emitting(false)
 
 func player_takes_damage(damage):
 	print("Player hit")
