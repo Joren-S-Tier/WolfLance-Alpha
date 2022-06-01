@@ -1,0 +1,194 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://ship.gd" type="Script" id=1]
+[ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
+[ext_resource path="res://Material_003.material" type="Material" id=3]
+[ext_resource path="res://Material_002.material" type="Material" id=4]
+[ext_resource path="res://spearship.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://cannonball.tscn" type="PackedScene" id=6]
+[ext_resource path="res://roll.tres" type="Animation" id=7]
+[ext_resource path="res://shot.wav" type="AudioStream" id=8]
+[ext_resource path="res://ShipCannon.gd" type="Script" id=9]
+[ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=10]
+[ext_resource path="res://PlayerStats.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Cannon Placeholder.tres" type="CubeMesh" id=12]
+[ext_resource path="res://image0018.png" type="Texture" id=13]
+[ext_resource path="res://hit.wav" type="AudioStream" id=14]
+[ext_resource path="res://dodge_boost.wav" type="AudioStream" id=15]
+[ext_resource path="res://boost.wav" type="AudioStream" id=16]
+[ext_resource path="res://Shepard_Tone_Boost.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Pause.gd" type="Script" id=18]
+[ext_resource path="res://bomb.tscn" type="PackedScene" id=19]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShipMesh:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -180, 0 ) ]
+}
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 5
+emission_ring_radius = 8.0
+emission_ring_inner_radius = 7.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+gravity = Vector3( 0, 0, 0 )
+
+[sub_resource type="QuadMesh" id=4]
+size = Vector2( 0.5, 0.5 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+gravity = Vector3( 0, -1, 0 )
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="BoxShape" id=7]
+
+[node name="ship" type="KinematicBody"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0 )
+script = ExtResource( 1 )
+max_health = 10
+current_health = 5
+ship_speed = 20
+cannonball = ExtResource( 6 )
+bomb = ExtResource( 19 )
+shoot_strength = 1500
+
+[node name="aimingReticule" parent="." instance=ExtResource( 10 )]
+transform = Transform( 5, 0, 3.17865e-07, 0, 5, 0, -3.17865e-07, 0, 5, -0.19413, -9.41285, -102.402 )
+modulate = Color( 0, 0, 0, 1 )
+pixel_size = 0.05
+aiming_speed = 50
+
+[node name="ShipMesh" type="MeshInstance" parent="."]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 4 )
+material/2 = ExtResource( 2 )
+script = ExtResource( 14 )
+
+[node name="Cannon" type="MeshInstance" parent="ShipMesh"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -9.68687, 9.85047 )
+mesh = ExtResource( 12 )
+material/0 = null
+script = ExtResource( 9 )
+target_scene = NodePath("../../aimingReticule")
+
+[node name="CannonBallSpawn" type="Position3D" parent="ShipMesh/Cannon"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0441799, 0.0375462, -2.33149 )
+
+[node name="reticule1" type="Sprite3D" parent="ShipMesh/Cannon"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.77771e-06, 0, -32.6221 )
+modulate = Color( 0.258824, 0.247059, 0.247059, 1 )
+pixel_size = 0.03
+texture = ExtResource( 13 )
+
+[node name="reticule2" type="Sprite3D" parent="ShipMesh/Cannon"]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -2.72949e-05, 0, -92.5199 )
+modulate = Color( 0.768627, 0.0313726, 0.0313726, 1 )
+pixel_size = 0.02
+texture = ExtResource( 13 )
+
+[node name="cannonballs" type="Node2D" parent="."]
+
+[node name="cannonballCooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="rollTimer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/roll = ExtResource( 7 )
+
+[node name="DodgeEffect" type="Particles" parent="."]
+amount = 60
+lifetime = 0.2
+explosiveness = 0.54
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="BoostEffect" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.09436, 13.7972 )
+amount = 100
+lifetime = 0.15
+local_coords = false
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 6 )
+
+[node name="audioPlayers" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0 )
+
+[node name="cannonFireSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="playerHitSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 14 )
+volume_db = -10.0
+
+[node name="dodgeBoostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 15 )
+volume_db = -10.0
+
+[node name="boostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 16 )
+volume_db = -15.0
+
+[node name="continousBoostSoundMaker" type="AudioStreamPlayer" parent="audioPlayers"]
+stream = ExtResource( 17 )
+volume_db = -10.0
+
+[node name="player hurtbox" type="CollisionShape" parent="."]
+transform = Transform( -3.61436, -0.0864394, 7.14859e-07, -0.0626575, 2.61995, 5.47769e-09, -7.783e-07, -5.49521e-09, -6.27438, -1.76993e-07, -4.45947, 2.78408 )
+shape = SubResource( 7 )
+
+[node name="movementGuide" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.73267, -27.3446 )
+
+[node name="PlayerStats" parent="." instance=ExtResource( 11 )]
+
+[node name="Pause" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 1027.0
+margin_bottom = 603.0
+script = ExtResource( 18 )
+
+[node name="Button" type="Button" parent="Pause"]
+pause_mode = 2
+margin_left = 46.0
+margin_top = 382.0
+margin_right = 168.0
+margin_bottom = 402.0
+text = "Resume"
+
+[node name="Button2" type="Button" parent="Pause"]
+pause_mode = 2
+margin_left = 46.0
+margin_top = 421.0
+margin_right = 168.0
+margin_bottom = 441.0
+text = "Quit"
+
+[node name="aimingOrient" type="Position3D" parent="."]
+transform = Transform( 1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, 2.52043e-05, -9.68687, -103.012 )
+
+[connection signal="timeout" from="cannonballCooldown" to="." method="_on_Cooldown_timeout"]
+[connection signal="timeout" from="rollTimer" to="." method="_on_rollTimer_timeout"]
+[connection signal="finished" from="audioPlayers/boostSoundMaker" to="." method="_on_boostSoundMaker_finished"]
+[connection signal="pressed" from="Pause/Button" to="Pause" method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause/Button2" to="Pause" method="_on_Button2_pressed"]

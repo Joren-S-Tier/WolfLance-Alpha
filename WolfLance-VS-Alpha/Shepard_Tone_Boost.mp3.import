@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Shepard_Tone_Boost.mp3-451103726cae19d63b64f34b6a179419.mp3str"
+
+[deps]
+
+source_file="res://Shepard_Tone_Boost.mp3"
+dest_files=[ "res://.import/Shepard_Tone_Boost.mp3-451103726cae19d63b64f34b6a179419.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

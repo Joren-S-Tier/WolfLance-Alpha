@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boost.wav-698ed9c960334245b35dfdd0649c1fbd.sample"
+
+[deps]
+
+source_file="res://boost.wav"
+dest_files=[ "res://.import/boost.wav-698ed9c960334245b35dfdd0649c1fbd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

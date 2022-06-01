@@ -1,0 +1,25 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "roll"
+length = 0.12
+step = 0.01
+tracks/0/type = "transform"
+tracks/0/path = NodePath("ShipMesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray(  )
+tracks/1/type = "value"
+tracks/1/path = NodePath("ShipMesh:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -180, 0 ), Vector3( 0, -180, -30 ), Vector3( 0, -180, -60 ), Vector3( 0, -180, -90 ), Vector3( 0, -180, -120 ), Vector3( 0, -180, -150 ), Vector3( 0, -180, -180 ), Vector3( 0, -180, -210 ), Vector3( 0, -180, -240 ), Vector3( 0, -180, -270 ), Vector3( 0, -180, -300 ), Vector3( 0, -180, -330 ), Vector3( 0, -180, 0 ) ]
+}
