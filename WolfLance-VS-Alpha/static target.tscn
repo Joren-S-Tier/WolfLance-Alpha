@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://static target.gd" type="Script" id=1]
 
@@ -9,7 +9,10 @@ albedo_color = Color( 0.976471, 0.12549, 0.0392157, 1 )
 
 [sub_resource type="SphereShape" id=1]
 
+[sub_resource type="SphereShape" id=4]
+
 [node name="static target" type="KinematicBody" groups=["Enemy"]]
+collision/safe_margin = 0.1
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -20,5 +23,8 @@ material/0 = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

@@ -32,3 +32,5 @@ func explode():
 	$explosions.add_child(new_explosion)
 	new_explosion.global_transform.origin = self.global_transform.origin
 	print ("explosion")
+	self.linear_velocity = Vector3.ZERO
+	$MeshInstance.visible = false
