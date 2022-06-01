@@ -31,4 +31,5 @@ func _on_startupTimer_timeout():
 	var targets = get_overlapping_bodies()
 	print (targets)
 	for target in targets:
-		target.take_damage(1)
+		if target.is_in_group(("Enemy")):
+			target.take_damage(1)

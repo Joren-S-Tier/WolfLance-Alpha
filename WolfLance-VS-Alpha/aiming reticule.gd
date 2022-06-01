@@ -11,6 +11,7 @@ onready var aimOrient = get_node("/root/main/rail/railcart/ship/aimingOrient")
 
 var noInput = true
 
+
 export var returnspeed = 400
 
 # Declare member variables here. Examples:
@@ -46,4 +47,4 @@ func _physics_process(delta):
 		#print (position)
 		#print (self.transform.origin)
 		self.transform.origin = position
-		pass
+		
