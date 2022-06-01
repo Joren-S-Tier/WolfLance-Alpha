@@ -7,11 +7,11 @@ var lower_boundry = -80
 export var aiming_speed = 10
 var input_vector = Vector3.ZERO
 var velocity = Vector3.ZERO
-onready var aimOrient = get_parent().get_node("aimingOrient")
+onready var aimOrient = get_node("/root/main/rail/railcart/ship/aimingOrient")
 
 var noInput = true
 
-export var returnspeed = 750
+export var returnspeed = 400
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -20,7 +20,7 @@ export var returnspeed = 750
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#print (aimOrient)
+	print (aimOrient)
 	pass
 
 
@@ -42,6 +42,8 @@ func _physics_process(delta):
 	#print (self.transform.origin.x)
 	#print (self.transform.origin.y)
 	if (noInput):
-		var velocity2 = self.transform.origin.move_toward(self.transform.origin,delta * returnspeed)
-		self.transform.origin = velocity2
+		var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
+		#print (position)
+		#print (self.transform.origin)
+		self.transform.origin = position
 		pass
