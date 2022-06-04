@@ -1,8 +1,8 @@
 extends KinematicBody
 
 var moveSpeed = 10.0
-var jumpSpeed = 20.0
-var gravity = 5.0
+var jumpSpeed = 10.0
+var gravity = 15.0
 
 var velocity = Vector3()
 onready var camera = get_node("CameraHolder")
@@ -37,7 +37,7 @@ func _physics_process(delta):
 	
 	
 	if Input.is_action_pressed("boosting") and is_on_floor():
-		#velocity.y = jumpSpeed
+		velocity.y = jumpSpeed
 		pass
 	velocity = move_and_slide(velocity, Vector3.UP)
 

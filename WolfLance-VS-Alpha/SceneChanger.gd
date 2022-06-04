@@ -1,4 +1,4 @@
-extends Control
+extends Spatial
 
 
 # Declare member variables here. Examples:
@@ -16,10 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_TextureButton2_pressed():
-	get_tree().quit()
-
-
-func _on_TextureButton_pressed():
-	#get_tree().change_scene(("res://main.tscn"))
-	pass
+func _on_SceneChangerArea_body_entered(body):
+	if body.is_in_group("Player"):
+		get_tree().change_scene(("res://main.tscn"))
