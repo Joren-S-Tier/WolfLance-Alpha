@@ -2,7 +2,7 @@ extends KinematicBody
 
 var moveSpeed = 10.0
 var jumpSpeed = 20.0
-var gravity = 15.0
+var gravity = 5.0
 
 var velocity = Vector3()
 onready var camera = get_node("CameraHolder")
