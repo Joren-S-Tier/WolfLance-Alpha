@@ -622,6 +622,7 @@ move_lock_y = true
 move_lock_z = true
 max_health = 15
 current_health = 10
+ship_speed = 40
 shoot_strength = 2000
 
 [node name="Camera" type="Camera" parent="rail/railcart"]
@@ -630,14 +631,28 @@ current = true
 far = 15000.0
 
 [node name="ShipOrient" type="Position3D" parent="rail/railcart"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72205e-06, -9.39997, 72.7969 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-05, 16.2564, 211.736 )
 visible = false
 script = ExtResource( 12 )
+Look_speed = 600
 
 [node name="MeshInstance" type="MeshInstance" parent="rail/railcart/ShipOrient"]
 transform = Transform( 6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0 )
 mesh = SubResource( 10 )
 material/0 = null
+
+[node name="ShipOrient2" type="Position3D" parent="rail/railcart"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-05, 15.374, 211.736 )
+visible = false
+script = ExtResource( 13 )
+ship_speed = 20
+
+[node name="MeshInstance" type="MeshInstance" parent="rail/railcart/ShipOrient2"]
+transform = Transform( 6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="rollTimer" type="Timer" parent="rail/railcart/ShipOrient2"]
 
 [node name="aimingReticule" parent="rail/railcart" instance=ExtResource( 5 )]
 transform = Transform( 20, 0, -4.65661e-10, 0, 20, 0, 4.65661e-10, 0, 20, 0.0238266, 0, 41.2521 )
@@ -648,19 +663,6 @@ stream = ExtResource( 7 )
 volume_db = -20.0
 autoplay = true
 script = ExtResource( 8 )
-
-[node name="ShipOrient2" type="Position3D" parent="rail/railcart"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72205e-06, -9.39997, 72.7969 )
-script = ExtResource( 13 )
-ship_speed = 20
-
-[node name="MeshInstance" type="MeshInstance" parent="rail/railcart/ShipOrient2"]
-transform = Transform( 6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0 )
-visible = false
-mesh = SubResource( 10 )
-material/0 = null
-
-[node name="rollTimer" type="Timer" parent="rail/railcart/ShipOrient2"]
 
 [node name="RailOrient" type="PathFollow" parent="rail"]
 transform = Transform( 30, 1.2402e-09, -0.0118049, 1.47624e-09, 30, 6.90334e-06, 0.0118049, -6.90334e-06, 30, 0.0121827, 4.49651e-06, -156.237 )
@@ -735,5 +737,5 @@ speed = 15
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.197, -21.7846, -514.39 )
 
 [connection signal="tree_entered" from="rail" to="rail/railcart/ship" method="_on_rail_tree_entered"]
-[connection signal="finished" from="rail/railcart/musicBox" to="rail/railcart" method="_on_musicBox_finished"]
 [connection signal="timeout" from="rail/railcart/ShipOrient2/rollTimer" to="rail/railcart/ShipOrient2" method="_on_rollTimer_timeout"]
+[connection signal="finished" from="rail/railcart/musicBox" to="rail/railcart" method="_on_musicBox_finished"]

@@ -1,10 +1,10 @@
 extends Position3D
-var up_boundry = 80
-var right_boundry = 100
-var left_boundry = -100
-var down_boundry = -80
-var returnspeed = 1000
-export var Look_speed = 1500
+var up_boundry = 120
+var right_boundry = 150
+var left_boundry = -150
+var down_boundry = -90
+var returnspeed = 400
+export var Look_speed = 1000
 var input_vector = Vector3.ZERO
 var velocity = Vector3.ZERO
 var velocity2 = Vector3.ZERO
