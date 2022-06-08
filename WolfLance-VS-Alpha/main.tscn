@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://cannonball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://static target.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://RailOrient.gd" type="Script" id=11]
 [ext_resource path="res://ShipOrient.gd" type="Script" id=12]
 [ext_resource path="res://ShipOrient2.gd" type="Script" id=13]
+[ext_resource path="res://RayCast.gd" type="Script" id=14]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -629,6 +630,16 @@ shoot_strength = 2000
 transform = Transform( -1, 0, 9.22009e-08, 0, 1, 0, -9.22009e-08, 0, -1, 0.20879, -1, -93 )
 current = true
 far = 15000.0
+
+[node name="RayCast" type="RayCast" parent="rail/railcart/Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.57572, 0 )
+visible = false
+enabled = true
+exclude_parent = false
+cast_to = Vector3( 0, 0, -1000 )
+debug_shape_custom_color = Color( 0.486275, 0.294118, 0.294118, 1 )
+debug_shape_thickness = 1.0
+script = ExtResource( 14 )
 
 [node name="ShipOrient" type="Position3D" parent="rail/railcart"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90735e-05, 16.2564, 211.736 )
