@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ollie_line.mp3-3f163396a57e139f9f63063c8bfd98c4.mp3str"
+
+[deps]
+
+source_file="res://Dialogue/ollie_line.mp3"
+dest_files=[ "res://.import/ollie_line.mp3-3f163396a57e139f9f63063c8bfd98c4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

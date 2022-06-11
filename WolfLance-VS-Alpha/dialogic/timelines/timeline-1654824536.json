@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Dialogue/ollie_npc_rant.mp3",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh I'm supposed to be some kinda NPC?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654824536.json",
+		"name": "ollie_npc_rant"
+	}
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ollie_npc_rant.mp3-23a49626565c15c37ad3eec9ec2973e8.mp3str"
+
+[deps]
+
+source_file="res://Dialogue/ollie_npc_rant.mp3"
+dest_files=[ "res://.import/ollie_npc_rant.mp3-23a49626565c15c37ad3eec9ec2973e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

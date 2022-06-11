@@ -1,0 +1,4 @@
+[
+{"name": "NPC", "text":  "Hello!"},
+{"name": "Player", "text": "Hello"}
+]

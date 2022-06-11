@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hello_dak.mp3-7531e482d21ceb5d3bc0bbe90fe1d51e.mp3str"
+
+[deps]
+
+source_file="res://Dialogue/hello_dak.mp3"
+dest_files=[ "res://.import/hello_dak.mp3-7531e482d21ceb5d3bc0bbe90fe1d51e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

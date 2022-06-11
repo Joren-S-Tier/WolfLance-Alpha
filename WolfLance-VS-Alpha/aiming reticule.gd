@@ -8,7 +8,7 @@ export var aiming_speed = 10
 var input_vector = Vector3.ZERO
 var velocity = Vector3.ZERO
 onready var aimOrient = get_node("/root/main/rail/railcart/ship/aimingOrient")
-
+var noInputTimerWentOff = false
 var noInput = true
 
 
@@ -32,6 +32,7 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	if (input_vector.x !=0 || input_vector.y!=0):
 		noInput = false
+		#noInputTimerWentOff = false
 	else:
 			noInput = true
 	input_vector.x = input_vector.x
@@ -43,8 +44,17 @@ func _physics_process(delta):
 	#print (self.transform.origin.x)
 	#print (self.transform.origin.y)
 	if (noInput):
-		var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
-		#print (position)
-		#print (self.transform.origin)
-		self.transform.origin = position
+		#print("no input")
+		$NoInputTimer.start()
+		if(noInputTimerWentOff):
+			var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
+			#print (position)
+			#print (self.transform.origin)
+			
+			self.transform.origin = position
 		
+
+
+func _on_NoInputTimer_timeout():
+	noInputTimerWentOff = true
+	
