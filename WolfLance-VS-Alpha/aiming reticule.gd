@@ -9,8 +9,8 @@ var input_vector = Vector3.ZERO
 var velocity = Vector3.ZERO
 onready var aimOrient = get_node("/root/main/rail/railcart/ship/aimingOrient")
 var noInputTimerWentOff = false
-var noInput = true
-
+var noInput = false
+var timerRunning = false
 
 export var returnspeed = 400
 
@@ -21,7 +21,7 @@ export var returnspeed = 400
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print (aimOrient)
+	#print (aimOrient)
 	pass
 
 
@@ -29,13 +29,16 @@ func _ready():
 func _physics_process(delta):
 	input_vector.x =  Input.get_action_strength("aim_right") - Input.get_action_strength("aim_left")
 	input_vector.y =  Input.get_action_strength("aim_up") - Input.get_action_strength("aim_down")
-	input_vector = input_vector.normalized()
-	if (input_vector.x !=0 || input_vector.y!=0):
-		noInput = false
+	print ("x==: ", input_vector.x)
+	print ("y==: ", input_vector.y)
+	if (input_vector.x==0 || input_vector.y==0):
+		noInput = true
 		#noInputTimerWentOff = false
 	else:
-			noInput = true
-	input_vector.x = input_vector.x
+			noInput = false
+	print ("noInputIs: ", noInput)
+	input_vector = input_vector.normalized()
+	#input_vector.x = input_vector.x
 	self.transform.origin.x = clamp(self.transform.origin.x, left_boundry,right_boundry)
 	self.transform.origin.y = clamp(self.transform.origin.y, lower_boundry, upper_boundry)
 	velocity.x = input_vector.x * aiming_speed * delta
@@ -46,17 +49,19 @@ func _physics_process(delta):
 
 	if (noInput):
 		#print("no input")
-		$NoInputTimer.start()
+		if(timerRunning ==false):
+			$NoInputTimer.start()
+			timerRunning = true
 		if(noInputTimerWentOff):
 			var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
 			#print (position)
 			#print (self.transform.origin)
-			
 			self.transform.origin = position
+	else:
+		noInputTimerWentOff = false
 
-		
 
 
 func _on_NoInputTimer_timeout():
 	noInputTimerWentOff = true
-	
+	timerRunning = false

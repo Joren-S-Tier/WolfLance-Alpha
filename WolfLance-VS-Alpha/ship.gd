@@ -128,7 +128,7 @@ func _on_rollTimer_timeout():
 	dEmitter.set_emitting(false)
 
 func player_takes_damage(damage):
-	print("Player hit")
+	#print("Player hit")
 	current_health -= damage
 	PlayerStats.set_health(current_health)
 	playerHitAudioPlayer.play()
@@ -139,7 +139,8 @@ func player_takes_damage(damage):
 
 
 func _on_PlayerStats_no_health():
-	print ("player death")
+	#print ("player death")
+	pass
 	
 func shoot():
 	if can_shoot:
@@ -148,10 +149,10 @@ func shoot():
 		var new_cannon_ball = cannonball.instance()
 		$cannonballs.add_child(new_cannon_ball)
 		new_cannon_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
-		print ("cannon Basis.Z=", cnr)
-		print ("RailCart Basis.Z=", rnr)
+		#print ("cannon Basis.Z=", cnr)
+		#print ("RailCart Basis.Z=", rnr)
 		var vectorProduct = cnr * -1
-		print ("Vector Product=", vectorProduct)
+		#print ("Vector Product=", vectorProduct)
 		new_cannon_ball.linear_velocity = vectorProduct * shoot_strength
 		cannonFireAudioPlayer.play()
 		can_shoot = false
@@ -168,10 +169,10 @@ func shoot_bomb():
 		var new_bomb = bomb.instance()
 		$cannonballs.add_child(new_bomb)
 		new_bomb.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
-		print ("cannon Basis.Z=", cnr)
-		print ("RailCart Basis.Z=", rnr)
+		#print ("cannon Basis.Z=", cnr)
+		#print ("RailCart Basis.Z=", rnr)
 		var vectorProduct = cnr * -1
-		print ("Vector Product=", vectorProduct)
+		#print ("Vector Product=", vectorProduct)
 		new_bomb.linear_velocity = vectorProduct * shoot_strength
 		cannonFireAudioPlayer.play()
 		can_shoot = false

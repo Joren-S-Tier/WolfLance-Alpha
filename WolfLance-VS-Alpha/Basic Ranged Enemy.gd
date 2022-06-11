@@ -27,7 +27,7 @@ func _ready():
 func _on_Area_body_entered(body):
 	if(body.is_in_group("Player")):
 		body.player_takes_damage(attack)
-	print ("hit")
+	#print ("hit")
 	#queue_free()
 	
 func _physics_process(delta):
@@ -46,8 +46,8 @@ func _physics_process(delta):
 func _on_PlayerDetection_body_entered(body):
 	if(body.is_in_group("Player")):
 		target = body
-		print ("player detected")
-		print (target)
+		#print ("player detected")
+		#print (target)
 
 
 func _on_Cooldown_timeout():

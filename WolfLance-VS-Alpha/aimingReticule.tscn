@@ -10,6 +10,8 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="NoInputTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.25
 one_shot = true
 
 [connection signal="timeout" from="NoInputTimer" to="." method="_on_NoInputTimer_timeout"]

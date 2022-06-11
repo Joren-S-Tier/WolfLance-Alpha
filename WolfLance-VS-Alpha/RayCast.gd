@@ -17,5 +17,5 @@ func _ready():
 func _physics_process(delta):
 	self.look_at(TrueAim.global_transform.origin,Vector3.UP)
 	status = self.is_colliding();
-	print(status)
+	#print(status)
 	

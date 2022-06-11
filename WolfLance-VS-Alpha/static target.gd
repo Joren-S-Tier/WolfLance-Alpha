@@ -28,7 +28,7 @@ func _on_Area_body_entered(body):
 		body.player_takes_damage(attack)
 	if(body.is_in_group("Projectile")):
 		take_damage(1)
-		print ("hit")
+		#print ("hit")
 	
 	if(body.is_in_group("Bomb")):
 		body.explode()

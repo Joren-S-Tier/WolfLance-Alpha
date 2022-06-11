@@ -24,13 +24,13 @@ func _on_cannonball_body_entered(body):
 	var new_explosion = explosion.instance()
 	$explosions.add_child(new_explosion)
 	new_explosion.global_transform.origin = self.global_transform.origin
-	print ("bomb hit")
+	#print ("bomb hit")
 	
 
 func explode():
 	var new_explosion = explosion.instance()
 	$explosions.add_child(new_explosion)
 	new_explosion.global_transform.origin = self.global_transform.origin
-	print ("explosion")
+	#print ("explosion")
 	self.linear_velocity = Vector3.ZERO
 	$MeshInstance.visible = false

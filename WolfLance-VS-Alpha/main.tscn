@@ -638,7 +638,7 @@ enabled = true
 exclude_parent = false
 cast_to = Vector3( 0, 0, -1000 )
 debug_shape_custom_color = Color( 0.486275, 0.294118, 0.294118, 1 )
-debug_shape_thickness = 1.0
+debug_shape_thickness = 1
 script = ExtResource( 14 )
 
 [node name="ShipOrient" type="Position3D" parent="rail/railcart"]
