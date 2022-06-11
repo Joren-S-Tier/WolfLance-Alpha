@@ -4,7 +4,7 @@ var upper_boundry = 80
 var right_boundry = 150
 var left_boundry = -150
 var lower_boundry = -80
-export var aiming_speed = 10
+export var aiming_speed = 600
 var input_vector = Vector3.ZERO
 var velocity = Vector3.ZERO
 onready var aimOrient = get_node("/root/main/rail/railcart/ship/aimingOrient")
@@ -43,6 +43,7 @@ func _physics_process(delta):
 	translate_object_local(velocity)
 	#print (self.transform.origin.x)
 	#print (self.transform.origin.y)
+
 	if (noInput):
 		#print("no input")
 		$NoInputTimer.start()
@@ -52,6 +53,7 @@ func _physics_process(delta):
 			#print (self.transform.origin)
 			
 			self.transform.origin = position
+
 		
 
 

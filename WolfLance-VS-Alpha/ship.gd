@@ -14,13 +14,14 @@ onready var bEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/BoostEff
 onready var dEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/DodgeEffect")
 var right_boundry = 50
 var left_boundry = -50
-var down_boundry = -50
+var down_boundry = -40
 var up_boundry = 50
 var forward_boundry = -5
 var backward_boundry = 5
 var input_vector = Vector3.ZERO
 var down_position = Vector2(0.0, 0.0)
-
+var z_rot = 0.0
+var z_rot_max = 1
 var first_boost = true
 
 #onready var playerStats = get_node("PlayerStats")
@@ -61,6 +62,13 @@ func _physics_process(delta):
 	self.transform.origin.x = clamp(self.transform.origin.x, left_boundry,right_boundry)
 	self.transform.origin.y = clamp(self.transform.origin.y, down_boundry, up_boundry)
 	#self.transform.origin.z = clamp(self.transform.origin.y, forward_boundry, backward_boundry)
+	if input_vector.x > 0:
+		z_rot = lerp(z_rot,z_rot_max,0.02)
+	elif input_vector.x < 0:
+		z_rot = lerp(z_rot,-z_rot_max,0.02)
+	else:
+			z_rot = lerp(z_rot, 0, 0.05)
+	ShipMesh.rotate_object_local(Vector3(0,0,1), z_rot)
 	
 	if is_rolling == true:
 		dEmitter.set_emitting(true)
