@@ -29,14 +29,14 @@ func _ready():
 func _physics_process(delta):
 	input_vector.x =  Input.get_action_strength("aim_right") - Input.get_action_strength("aim_left")
 	input_vector.y =  Input.get_action_strength("aim_up") - Input.get_action_strength("aim_down")
-	print ("x==: ", input_vector.x)
-	print ("y==: ", input_vector.y)
-	if (input_vector.x==0 || input_vector.y==0):
+	#print ("x==: ", input_vector.x)
+	#print ("y==: ", input_vector.y)
+	if (input_vector.x==0 and input_vector.y==0):
 		noInput = true
 		#noInputTimerWentOff = false
 	else:
 			noInput = false
-	print ("noInputIs: ", noInput)
+	#print ("noInputIs: ", noInput)
 	input_vector = input_vector.normalized()
 	#input_vector.x = input_vector.x
 	self.transform.origin.x = clamp(self.transform.origin.x, left_boundry,right_boundry)

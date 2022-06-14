@@ -41,4 +41,6 @@ material/0 = SubResource( 3 )
 [node name="ollie" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -34.5382, -29.0679, -29.4138 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="SceneChanger/SceneChangerArea" to="SceneChanger" method="_on_SceneChangerArea_body_entered"]
