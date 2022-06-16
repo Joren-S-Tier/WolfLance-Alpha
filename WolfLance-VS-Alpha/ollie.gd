@@ -12,13 +12,15 @@ var dialog = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	player_in_range = false
+	$PlayerDetectionTimer.start()
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if player_in_range &&Input.get_action_strength("shoot")>0 && can_talk:
+	
+	if (player_in_range &&Input.get_action_strength("shoot")>0 && can_talk):
 		match lineNumber:
 			0:
 				dialog = Dialogic.start("ollie talks")
@@ -40,6 +42,7 @@ func _process(delta):
 
 
 func _on_player_detection_area_body_entered(body):
+	#print("player detected")
 	player_in_range = true
 #	if body.is_in_group("Player") &&Input.get_action_strength("shoot")>0:
 #		match lineNumber:
@@ -71,3 +74,7 @@ func _on_player_detection_area_area_exited(area):
 func _on_Timer_timeout():
 	can_talk = true
 	remove_child(dialog)
+
+
+func _on_PlayerDetectionTimer_timeout():
+	$playerdetectionarea/CollisionShape.disabled = false

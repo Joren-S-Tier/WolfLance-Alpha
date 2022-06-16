@@ -13,12 +13,13 @@ func _ready():
 	pass # Replace with function body.
 
 func _input(event):
+	pass
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
 
 func _process(delta):
+	pass
 	var rotation = Vector3(mouseDelta.y, mouseDelta.x, 0) * touchSpeed *delta
 	rotation_degrees.x += rotation.x
 	rotation_degrees.x = clamp(rotation_degrees.x, minLookAngle, maxLookAngle)
-	
 	player.rotation_degrees.y -=rotation.y
