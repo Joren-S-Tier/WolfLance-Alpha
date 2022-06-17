@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PSO_loop.mp3-d3e0f81f8a453a032cf9b0d4d06f1dc3.mp3str"
+
+[deps]
+
+source_file="res://Music/PSO_loop.mp3"
+dest_files=[ "res://.import/PSO_loop.mp3-d3e0f81f8a453a032cf9b0d4d06f1dc3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

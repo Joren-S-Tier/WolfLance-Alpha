@@ -5,7 +5,7 @@
 [ext_resource path="res://fountain.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SceneChanger.gd" type="Script" id=4]
 [ext_resource path="res://ollie.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Music/Understanding.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Music/PSO_loop.mp3" type="AudioStream" id=6]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -44,6 +44,7 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -9.34044, -29.0679, -56.
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -20.0
 autoplay = true
 
 [connection signal="body_entered" from="SceneChanger/SceneChangerArea" to="SceneChanger" method="_on_SceneChangerArea_body_entered"]
