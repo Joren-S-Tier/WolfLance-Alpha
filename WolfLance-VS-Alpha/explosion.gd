@@ -19,7 +19,9 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	queue_free()
+	$MeshInstance.visible = false
+	$CollisionShape.disabled = true
+	$EndTimer.start()
 
 
 func _on_explosion_body_entered(body):
@@ -30,7 +32,12 @@ func _on_explosion_body_entered(body):
 
 func _on_startupTimer_timeout():
 	var targets = get_overlapping_bodies()
+	$AudioStreamPlayer.play()
 	#print (targets)
 	for target in targets:
 		if target.is_in_group(("Enemy")):
 			target.take_damage(1)
+
+
+func _on_EndTimer_timeout():
+	queue_free()

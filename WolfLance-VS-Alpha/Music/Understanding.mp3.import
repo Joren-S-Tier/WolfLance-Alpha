@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Understanding.mp3-1a7922036e8eeb563648f92dc48fe2c4.mp3str"
+
+[deps]
+
+source_file="res://Music/Understanding.mp3"
+dest_files=[ "res://.import/Understanding.mp3-1a7922036e8eeb563648f92dc48fe2c4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

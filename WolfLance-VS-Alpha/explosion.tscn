@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://explosion.gd" type="Script" id=1]
+[ext_resource path="res://Audio/explosion2.mp3" type="AudioStream" id=2]
 
 [sub_resource type="SphereShape" id=1]
 radius = 20.5374
@@ -27,7 +28,15 @@ wait_time = 0.25
 
 [node name="startupTimer" type="Timer" parent="."]
 wait_time = 0.1
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="body_entered" from="." to="." method="_on_explosion_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="startupTimer" to="." method="_on_startupTimer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]
