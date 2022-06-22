@@ -64,6 +64,7 @@ func _on_Area_body_entered(body):
 		var dialog = Dialogic.start("ollie_ambient1")
 		add_child(dialog)
 		saidTheLine = true
+		body.display_subtitle("Hello Dak")
 
 
 

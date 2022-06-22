@@ -31,3 +31,15 @@ far = 1000.0
 [node name="SpringArm" type="SpringArm" parent="."]
 spring_length = 7.0
 margin = 0.2
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 475.0
+margin_top = 479.0
+margin_right = 744.0
+margin_bottom = 519.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

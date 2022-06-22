@@ -41,5 +41,12 @@ func _physics_process(delta):
 		pass
 	velocity = move_and_slide(velocity, Vector3.UP)
 
+func display_subtitle(text):
+	$Subtitle.visible = true
+	$Subtitle.text = text
+	$Timer.start()
 
 
+
+func _on_Timer_timeout():
+	$Subtitle.visible = false
