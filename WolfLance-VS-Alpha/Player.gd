@@ -8,9 +8,11 @@ var velocity = Vector3()
 onready var camera = get_node("CameraHolder")
 
 onready var SpringArm = $SpringArm
+var rotate_up = Vector3(1, 0, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rotate_up = rotate_up.normalized()
 	pass # Replace with function body.
 
 
@@ -20,6 +22,8 @@ func _physics_process(delta):
 	
 	var input = Vector3()
 	
+	
+	
 	if Input.is_action_pressed("move_right"):
 		input.z += 1
 	if Input.is_action_pressed("move_left"):
@@ -28,6 +32,8 @@ func _physics_process(delta):
 		input.x+= 1
 	if Input.is_action_pressed("move_down"):
 		input.x-= 1
+		
+		
 	input = input.normalized()
 	
 	if Input.is_action_pressed("aim_right"):
@@ -35,12 +41,14 @@ func _physics_process(delta):
 	if Input.is_action_pressed("aim_left"):
 		SpringArm.rotate_y(-.01)
 	if Input.is_action_pressed("aim_up"):
-		SpringArm.rotate_z(.01)
+		#SpringArm.rotate_z(.01)
+		SpringArm.rotate_object_local(rotate_up, .01)
 	if Input.is_action_pressed("aim_down"):
-		SpringArm.rotate_z(-.01)
+		#SpringArm.rotate_z(-.01)
+		SpringArm.rotate_object_local(rotate_up, -.01)
 	
 	
-	var direction = (transform.basis.z * input.z + transform.basis.x *input.x)
+	var direction = (SpringArm.transform.basis.z * input.z + SpringArm.transform.basis.x *input.x)
 	velocity.x = direction.x * moveSpeed
 	velocity.z = direction.z * moveSpeed
 	velocity.y -= gravity * delta
