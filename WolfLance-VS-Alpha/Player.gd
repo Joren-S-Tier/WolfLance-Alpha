@@ -17,24 +17,27 @@ func _ready():
 
 
 func _physics_process(delta):
-	velocity.x = 0
-	velocity.z = 0
 	
-	var input = Vector3()
+	var input_vector = Vector3()
 	
 	
+	self.look_at($SpringArm/PlayerOrient.global_transform.origin, Vector3.UP)
 	
-	if Input.is_action_pressed("move_right"):
-		input.z += 1
-	if Input.is_action_pressed("move_left"):
-		input.z-= 1
-	if Input.is_action_pressed("move_up"):
-		input.x+= 1
-	if Input.is_action_pressed("move_down"):
-		input.x-= 1
-		
-		
-	input = input.normalized()
+#	if Input.is_action_pressed("move_right"):
+#		input.z += 1
+#	if Input.is_action_pressed("move_left"):
+#		input.z-= 1
+#	if Input.is_action_pressed("move_up"):
+#		input.x+= 1
+#	if Input.is_action_pressed("move_down"):
+#		input.x-= 1
+	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	input_vector.y = Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
+	input_vector = input_vector.normalized()
+	
+	
+	velocity.z= input_vector.y * moveSpeed
+	velocity.x = input_vector.x * moveSpeed
 	
 	if Input.is_action_pressed("aim_right"):
 		SpringArm.rotate_y(.01)
@@ -47,10 +50,11 @@ func _physics_process(delta):
 		#SpringArm.rotate_z(-.01)
 		SpringArm.rotate_object_local(rotate_up, -.01)
 	
-	
-	var direction = (SpringArm.transform.basis.z * input.z + SpringArm.transform.basis.x *input.x)
-	velocity.x = direction.x * moveSpeed
-	velocity.z = direction.z * moveSpeed
+	print ("Spring basis.z ", SpringArm.transform.basis.z)
+	print ("Spring basis.x ", SpringArm.transform.basis.x)
+	#var direction = (SpringArm.transform.basis.z * input.z), (SpringArm.transform.basis.x *input.x)
+	#velocity.x = direction.x * moveSpeed
+	#velocity.z = direction.z * moveSpeed
 	velocity.y -= gravity * delta
 	
 	
