@@ -1,0 +1,383 @@
+{
+	"events": [
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dak!!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey Ollie. What’s up?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’m freaking out!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, I can see that. Do your breathing."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don’t tell me to do my breathing, this is serious!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What’s wrong?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look around! We’re trapped in this underdeveloped blank tech doomspace!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“Doomspace”?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Yeah, what else would ya call it?!"
+		},
+		{
+			"choice": "An alpha build",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": "An alpha build"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s just an alpha build, Ollie. The game isn’t even close to done yet."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Then why do we exist? Why are we here?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To just… you know, try stuff out. To chat and stuff"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "B-but… Just to chat? Is that really the sole purpose of our existence?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The boys are trying to figure out how dialogue options work. It’s important."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We’re just here to say some lines? Ugh. Lame. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s a bit more complicated than that. I could have said at least three other things."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So do you want me to… say the same thing when you talk with me again, so you can try the other dialogue options?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nah. We also need to test you saying a different line repeatedly after this dialogue tree is done. So when I come up to you again, say something else."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, okay, fine."
+		},
+		{
+			"choice": "The Hardsell",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": "The Hardsell"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is The Hardsell, Ollie. Come on. Our homebase? Where we live?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This? This is it?!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are you okay? Did you hit your head again?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, but that’s not the point. Look at this dump! There’s hardly anything here!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It could use some decorations, I admit. We should hit up Hobby Lobby or something."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There’s a bigger problem. How are we supposed to go to the bathroom?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There’s gotta be a functional toilet here somewhere. I’ll look around."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well hurry up. I saw Ted’s latest blender model and it makes me wanna shit."
+		},
+		{
+			"choice": "GODOT",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s called GODOT. It’s an open-source engine."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah, b-but why aren’t we using Unity? Or Unreal?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Because they take a sizable portion of your profits when the game is released."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah yeah, that sucks. You’re right."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "GODOT is fine. It’s Python, or whatever. It’s fine."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There is something undeniably sexy about using an open-source engine for your game."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We’re gonna be GODOT pioneers, dude. It’s gonna be a selling point of our game."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "For nerds maybe. I doubt normies are gonna care that much. But you’re right. Open source is cool. It’s like… the principal of the matter, you know?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah. The principal of… doing things yourself. Or something."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Except GODOT has tons of people working together to develop it."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah but… together, separately."
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Also together together, sometimes."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Decentralized. Is that the word?"
+		},
+		{
+			"character": "character-1654735866.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah that sounds nice. Decentralized."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Decentralized. Sounds nice."
+		},
+		{
+			"choice": "Purgatory",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": "Purgatory"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It’s like a… purgatory of some kind."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So do we need to do something to get outta here? Like, learn an important lesson about ourselves and the world?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Or maybe it’s just a matter of time before we’re… released."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Or maybe we’re here forever."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh God!!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Relax. If we are stuck here forever, freaking out about it isn’t gonna change anything."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh God, oh jeez!! What are we gonna do?! They don’t even have Xbox!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They don’t even have physics yet."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No - NO PHYSICS?!!?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah. Try to jump."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I-I can’t… uuuuugh… I can’t jump, Dak!!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yep. No physics."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "AAAAaaaaah!!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656789459.json",
+		"name": "ollie_tree"
+	}
+}

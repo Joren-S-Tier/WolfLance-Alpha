@@ -10,6 +10,8 @@ var player_in_range = false
 var can_talk = true
 var dialog = null
 
+var choiceNum = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_in_range = false
@@ -23,19 +25,20 @@ func _process(delta):
 	if (player_in_range &&Input.get_action_strength("shoot")>0 && can_talk):
 		match lineNumber:
 			0:
-				dialog = Dialogic.start("ollie talks")
+				dialog = Dialogic.start("ollie_tree")
 				add_child(dialog)
-				lineNumber += 1
+				#lineNumber += 1
 				can_talk = false
-				$Timer.set_wait_time(11)
-				$Timer.start()
+				#$Timer.set_wait_time(11)
+				#$Timer.start()
 			1:
-				dialog = Dialogic.start("ollie_npc_rant")
-				add_child(dialog)
-				lineNumber += 1
-				can_talk = false
-				$Timer.set_wait_time(20)
-				$Timer.start()
+#				dialog = Dialogic.start("ollie_npc_rant")
+#				add_child(dialog)
+#				lineNumber += 1
+#				can_talk = false
+#				$Timer.set_wait_time(20)
+#				$Timer.start()
+				pass
 			2: 
 				pass
 

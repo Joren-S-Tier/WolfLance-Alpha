@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://CameraHolder.gd" type="Script" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://CameraManager.gd" type="Script" id=3]
 [ext_resource path="res://CameraOrbit.gd" type="Script" id=4]
+[ext_resource path="res://murasama placeholder.webm" type="VideoStream" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.197812, 0.214358, 0.21664 )
@@ -50,5 +51,13 @@ script = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="CameraOrbit"]
 transform = Transform( -1, 0, -8.74228e-08, -2.31671e-08, 0.964248, 0.265001, 8.42973e-08, 0.265001, -0.964248, 0, 2, -5 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
+margin_left = 305.0
+margin_top = 165.0
+margin_right = 760.0
+margin_bottom = 432.0
+stream = ExtResource( 5 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
