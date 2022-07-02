@@ -21,7 +21,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.6721, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.685852, -30.5497, 1.94469 )
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.1543, -1.93711, 9.95207 )
 
 [node name="fountain" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -60.6886, -29.529, -6.71124 )

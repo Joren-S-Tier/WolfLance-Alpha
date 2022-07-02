@@ -5,9 +5,9 @@ var jumpSpeed = 10.0
 var gravity = 15.0
 
 var velocity = Vector3()
-onready var camera = get_node("CameraHolder")
+onready var camera = $CameraOrbit
 
-onready var SpringArm = $SpringArm
+#onready var SpringArm = $SpringArm
 var rotate_up = Vector3(1, 0, 0)
 
 # Called when the node enters the scene tree for the first time.
@@ -18,11 +18,29 @@ func _ready():
 
 func _physics_process(delta):
 	
-	var input_vector = Vector3()
+	velocity.x = 0
+	velocity.z = 0
 	
+	var input = Vector3()
 	
-	self.look_at($SpringArm/PlayerOrient.global_transform.origin, Vector3.UP)
+	if Input.is_action_pressed("move_up"):
+		input.z+=1
+	if Input.is_action_pressed("move_down"):
+		input.z-=1
+	if Input.is_action_pressed("move_right"):
+		input.x-= 1
+	if Input.is_action_pressed("move_left"):
+		input.x +=1
 	
+	input = input.normalized()
+	
+	var dir = (transform.basis.z * input.z + transform.basis.x * input.x)
+	
+	velocity.x = dir.x *moveSpeed
+	velocity.z = dir.z *moveSpeed
+	
+#	self.look_at($SpringArm/PlayerOrient.global_transform.origin, Vector3.UP)
+#
 #	if Input.is_action_pressed("move_right"):
 #		input.z += 1
 #	if Input.is_action_pressed("move_left"):
@@ -31,27 +49,38 @@ func _physics_process(delta):
 #		input.x+= 1
 #	if Input.is_action_pressed("move_down"):
 #		input.x-= 1
-	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	input_vector.y = Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
-	input_vector = input_vector.normalized()
 	
-	
-	velocity.z= input_vector.y * moveSpeed
-	velocity.x = input_vector.x * moveSpeed
+#	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+#	input_vector.y = Input.get_action_strength("move_up") - Input.get_action_strength("move_down")
+#	input_vector = input_vector.normalized()
+#
+#
+#	velocity.z= input_vector.y * moveSpeed
+#	velocity.x = input_vector.x * moveSpeed
 	
 	if Input.is_action_pressed("aim_right"):
-		SpringArm.rotate_y(.01)
+		pass
+		#print (SpringArm.rotation.y)
+		#SpringArm.rotate_y(clamp(SpringArm.rotation.y+.01,-5,5))
+		#SpringArm.rotate_y(.01)
 	if Input.is_action_pressed("aim_left"):
-		SpringArm.rotate_y(-.01)
+		pass
+		#print (SpringArm.rotation.y)
+		#SpringArm.rotate_y(clamp(SpringArm.rotation.y-.01,-5,5))
+		#SpringArm.rotate_y(-.01)
 	if Input.is_action_pressed("aim_up"):
+		pass
+		#print (SpringArm.rotation.x)
 		#SpringArm.rotate_z(.01)
-		SpringArm.rotate_object_local(rotate_up, .01)
+		#SpringArm.rotate_object_local(rotate_up, .01)
 	if Input.is_action_pressed("aim_down"):
+		pass
 		#SpringArm.rotate_z(-.01)
-		SpringArm.rotate_object_local(rotate_up, -.01)
+		#print (SpringArm.rotation.x)
+		#SpringArm.rotate_object_local(rotate_up, -.01)
 	
-	print ("Spring basis.z ", SpringArm.transform.basis.z)
-	print ("Spring basis.x ", SpringArm.transform.basis.x)
+	
+	
 	#var direction = (SpringArm.transform.basis.z * input.z), (SpringArm.transform.basis.x *input.x)
 	#velocity.x = direction.x * moveSpeed
 	#velocity.z = direction.z * moveSpeed
