@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/10 DAK its just an alpha build.mp3-7de8f4e2d4e36ab78166949b4c27f97e.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/10 DAK its just an alpha build.mp3"
+dest_files=[ "res://.import/10 DAK its just an alpha build.mp3-7de8f4e2d4e36ab78166949b4c27f97e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

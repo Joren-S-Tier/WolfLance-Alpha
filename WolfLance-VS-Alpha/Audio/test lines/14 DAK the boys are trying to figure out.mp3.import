@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/14 DAK the boys are trying to figure out.mp3-0e50bfbac4692061cefc99d4e1037d16.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/14 DAK the boys are trying to figure out.mp3"
+dest_files=[ "res://.import/14 DAK the boys are trying to figure out.mp3-0e50bfbac4692061cefc99d4e1037d16.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

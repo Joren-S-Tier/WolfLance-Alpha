@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/31 OLLIE yeah but why arent we using unity.mp3-b2c4b0271fb6e4d0a33a9dd62f336ef7.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/31 OLLIE yeah but why arent we using unity.mp3"
+dest_files=[ "res://.import/31 OLLIE yeah but why arent we using unity.mp3-b2c4b0271fb6e4d0a33a9dd62f336ef7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

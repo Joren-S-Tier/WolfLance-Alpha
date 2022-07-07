@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/29 OLLIE we need some potted plants too.mp3-d645835af6e06af31b84a1283a1acf70.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/29 OLLIE we need some potted plants too.mp3"
+dest_files=[ "res://.import/29 OLLIE we need some potted plants too.mp3-d645835af6e06af31b84a1283a1acf70.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

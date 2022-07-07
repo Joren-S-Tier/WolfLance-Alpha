@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/5 OLLIE dont tell me to do my breathing.mp3-cff6e349c4a45830fd82460dd97b9bee.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/5 OLLIE dont tell me to do my breathing.mp3"
+dest_files=[ "res://.import/5 OLLIE dont tell me to do my breathing.mp3-cff6e349c4a45830fd82460dd97b9bee.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

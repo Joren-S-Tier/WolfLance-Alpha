@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2 DAK hey ollie whats up.mp3-8fb218acf5def4f949c86a8b6dd87f14.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/2 DAK hey ollie whats up.mp3"
+dest_files=[ "res://.import/2 DAK hey ollie whats up.mp3-8fb218acf5def4f949c86a8b6dd87f14.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

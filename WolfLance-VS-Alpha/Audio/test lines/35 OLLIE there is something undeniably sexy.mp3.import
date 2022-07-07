@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/35 OLLIE there is something undeniably sexy.mp3-6c46394d32115432d192eb0ecd061a2c.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/35 OLLIE there is something undeniably sexy.mp3"
+dest_files=[ "res://.import/35 OLLIE there is something undeniably sexy.mp3-6c46394d32115432d192eb0ecd061a2c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

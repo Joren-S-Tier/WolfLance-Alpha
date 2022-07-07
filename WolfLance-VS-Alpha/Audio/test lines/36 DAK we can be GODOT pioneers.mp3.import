@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/36 DAK we can be GODOT pioneers.mp3-f7586bb6633a6ddc4de2ed15033d36f5.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/36 DAK we can be GODOT pioneers.mp3"
+dest_files=[ "res://.import/36 DAK we can be GODOT pioneers.mp3-f7586bb6633a6ddc4de2ed15033d36f5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

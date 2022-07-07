@@ -1,10 +1,26 @@
 {
 	"events": [
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/1 OLLIE Dak.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1654735866.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Dak!!"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/2 DAK hey ollie whats up.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -13,10 +29,26 @@
 			"text": "Hey Ollie. What’s up?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/3 OLLIE im freaking out.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1654735866.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "I’m freaking out!"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/4 DAK yeah i can see that.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -25,10 +57,26 @@
 			"text": "Yeah, I can see that. Do your breathing."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/5 OLLIE dont tell me to do my breathing.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1654735866.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Don’t tell me to do my breathing, this is serious!"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/6 DAK whats wrong.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -37,16 +85,40 @@
 			"text": "What’s wrong?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/7 OLLIE look around were trapped.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1654735866.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Look around! We’re trapped in this underdeveloped blank tech doomspace!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/8 DAK doomspace.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "“Doomspace”?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/9 OLLIE yeah what else would you call it.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -65,10 +137,26 @@
 			"value": "An alpha build"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/10 DAK its just an alpha build.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It’s just an alpha build, Ollie. The game isn’t even close to done yet."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/11 OLLIE then why do we exist.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -77,10 +165,26 @@
 			"text": "Then why do we exist? Why are we here?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/12 DAK to try stuff out.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "To just… you know, try stuff out. To chat and stuff"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/13 OLLIE but just to chat.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -89,10 +193,26 @@
 			"text": "B-but… Just to chat? Is that really the sole purpose of our existence?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/14 DAK the boys are trying to figure out.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "The boys are trying to figure out how dialogue options work. It’s important."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/15 OLLIE were just here to say some lines.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -101,10 +221,26 @@
 			"text": "We’re just here to say some lines? Ugh. Lame. "
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/16 DAK its a bit more complicated than that.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It’s a bit more complicated than that. I could have said at least three other things."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/17 OLLIE so do you want me to say the same thing.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -113,10 +249,26 @@
 			"text": "So do you want me to… say the same thing when you talk with me again, so you can try the other dialogue options?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/18 DAK nah we also need to test.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Nah. We also need to test you saying a different line repeatedly after this dialogue tree is done. So when I come up to you again, say something else."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/19 OLLIE okay okay fine.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -132,10 +284,26 @@
 			"value": "The Hardsell"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/21 DAK this is the hardsell.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "This is The Hardsell, Ollie. Come on. Our homebase? Where we live?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/22 OLLIE this this is it.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -144,10 +312,26 @@
 			"text": "This? This is it?!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/23 DAK are you okay.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Are you okay? Did you hit your head again?"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/24 OLLIE yes but thats not the point.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -156,10 +340,26 @@
 			"text": "Yes, but that’s not the point. Look at this dump! There’s hardly anything here!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/25 DAK it could use some decorations.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It could use some decorations, I admit. We should hit up Hobby Lobby or something."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/26 OLLIE theres a bigger problem.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -168,10 +368,26 @@
 			"text": "There’s a bigger problem. How are we supposed to go to the bathroom?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/27 DAK theres gotta be a functional toilet.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "There’s gotta be a functional toilet here somewhere. I’ll look around."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/28 OLLIE well hurry up.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -187,10 +403,26 @@
 			"value": ""
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/30 DAK its called GODOT.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It’s called GODOT. It’s an open-source engine."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/31 OLLIE yeah but why arent we using unity.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -199,10 +431,26 @@
 			"text": "Yeah, b-but why aren’t we using Unity? Or Unreal?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/32 DAK because they take a sizable portion.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Because they take a sizable portion of your profits when the game is released."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/33 OLLIE ah yeah that sucks.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -211,10 +459,26 @@
 			"text": "Ah yeah, that sucks. You’re right."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/34 DAK GODOT is fine.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "GODOT is fine. It’s Python, or whatever. It’s fine."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/35 OLLIE there is something undeniably sexy.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -223,10 +487,26 @@
 			"text": "There is something undeniably sexy about using an open-source engine for your game."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/36 DAK we can be GODOT pioneers.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "We’re gonna be GODOT pioneers, dude. It’s gonna be a selling point of our game."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/37 OLLIE for nerds maybe.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -235,10 +515,26 @@
 			"text": "For nerds maybe. I doubt normies are gonna care that much. But you’re right. Open source is cool. It’s like… the principal of the matter, you know?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/38 DAK yeah the principal of uh.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yeah. The principal of… doing things yourself. Or something."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/39 OLLIE except GODOT has tons.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -247,10 +543,26 @@
 			"text": "Except GODOT has tons of people working together to develop it."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/40 DAK yeah but together separately.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yeah but… together, separately."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/41 OLLIE also together together sometimes.mp3",
+			"volume": 0
 		},
 		{
 			"character": "character-1654735866.json",
@@ -259,16 +571,40 @@
 			"text": "Also together together, sometimes."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/42 DAK decentralized.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Decentralized. Is that the word?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/43 OLLIE yeah that sounds nice.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1654735866.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yeah that sounds nice. Decentralized."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/44 DAK decentralized sounds nice.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -284,10 +620,26 @@
 			"value": "Purgatory"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/46 DAK its like a purgatory of some kind.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "It’s like a… purgatory of some kind."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/47 OLLIE so do we need to do something.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -296,10 +648,26 @@
 			"text": "So do we need to do something to get outta here? Like, learn an important lesson about ourselves and the world?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/48 DAK maybe.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Maybe."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/49 OLLIE or maybe its just a matter of time.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -308,10 +676,26 @@
 			"text": "Or maybe it’s just a matter of time before we’re… released."
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/50 DAK or maybe were here forever.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Or maybe we’re here forever."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/51 OLLIE oh my god.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -320,10 +704,26 @@
 			"text": "Oh God!!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/52 DAK relax.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Relax. If we are stuck here forever, freaking out about it isn’t gonna change anything."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/53 OLLIE oh god oh jeez.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -332,10 +732,26 @@
 			"text": "Oh God, oh jeez!! What are we gonna do?! They don’t even have Xbox!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/54 DAK they dont even have physics.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "They don’t even have physics yet."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/55 OLLIE no physics.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -344,10 +760,26 @@
 			"text": "No - NO PHYSICS?!!?"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/56 DAK yeah try to jump.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yeah. Try to jump."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/57 OLLIE i cant i cant jump.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",
@@ -356,10 +788,26 @@
 			"text": " I-I can’t… uuuuugh… I can’t jump, Dak!!"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/58 DAK yep no physics.mp3",
+			"volume": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Yep. No physics."
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Audio/test lines/59 OLLIE screams externally.mp3",
+			"volume": 0
 		},
 		{
 			"character": "",

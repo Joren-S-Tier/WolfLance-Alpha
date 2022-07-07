@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/51 OLLIE oh my god.mp3-a3e9449c51aa9de1e5765a35dbd1562b.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/51 OLLIE oh my god.mp3"
+dest_files=[ "res://.import/51 OLLIE oh my god.mp3-a3e9449c51aa9de1e5765a35dbd1562b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

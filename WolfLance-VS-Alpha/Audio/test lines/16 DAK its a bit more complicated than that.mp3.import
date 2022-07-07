@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/16 DAK its a bit more complicated than that.mp3-9a14088109a13b597910968eccc9a40e.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/16 DAK its a bit more complicated than that.mp3"
+dest_files=[ "res://.import/16 DAK its a bit more complicated than that.mp3-9a14088109a13b597910968eccc9a40e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

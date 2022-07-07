@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/44 DAK decentralized sounds nice.mp3-af05cb8782c3d5f4d3a70475ed38cb6b.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/44 DAK decentralized sounds nice.mp3"
+dest_files=[ "res://.import/44 DAK decentralized sounds nice.mp3-af05cb8782c3d5f4d3a70475ed38cb6b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

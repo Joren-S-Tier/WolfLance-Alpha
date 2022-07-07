@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/52 DAK relax.mp3-9af96ed79d86be266ddf697cf4ac82a6.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/52 DAK relax.mp3"
+dest_files=[ "res://.import/52 DAK relax.mp3-9af96ed79d86be266ddf697cf4ac82a6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

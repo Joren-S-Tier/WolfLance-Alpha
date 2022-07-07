@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/45 OLLIE decentralized.mp3-08a3cdc8af5d1acd12b438d37986c5d3.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/45 OLLIE decentralized.mp3"
+dest_files=[ "res://.import/45 OLLIE decentralized.mp3-08a3cdc8af5d1acd12b438d37986c5d3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/54 DAK they dont even have physics.mp3-7adf68a1d891375ec3415a03a571f04f.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/54 DAK they dont even have physics.mp3"
+dest_files=[ "res://.import/54 DAK they dont even have physics.mp3-7adf68a1d891375ec3415a03a571f04f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

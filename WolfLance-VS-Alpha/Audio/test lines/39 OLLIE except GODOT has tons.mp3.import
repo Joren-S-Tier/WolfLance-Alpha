@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/39 OLLIE except GODOT has tons.mp3-e8f854d326e3d772b94ddc54a10be2ee.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/39 OLLIE except GODOT has tons.mp3"
+dest_files=[ "res://.import/39 OLLIE except GODOT has tons.mp3-e8f854d326e3d772b94ddc54a10be2ee.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

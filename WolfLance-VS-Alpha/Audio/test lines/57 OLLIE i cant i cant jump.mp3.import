@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/57 OLLIE i cant i cant jump.mp3-0ba096623e92876316b7d7f81fcc9ebd.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/57 OLLIE i cant i cant jump.mp3"
+dest_files=[ "res://.import/57 OLLIE i cant i cant jump.mp3-0ba096623e92876316b7d7f81fcc9ebd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

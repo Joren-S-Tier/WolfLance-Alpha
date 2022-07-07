@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/32 DAK because they take a sizable portion.mp3-3d64e84085ffc0bc70ceb499d67dbc4c.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/32 DAK because they take a sizable portion.mp3"
+dest_files=[ "res://.import/32 DAK because they take a sizable portion.mp3-3d64e84085ffc0bc70ceb499d67dbc4c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/53 OLLIE oh god oh jeez.mp3-e9b504e4d0c34bd78773a0956ca60d68.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/53 OLLIE oh god oh jeez.mp3"
+dest_files=[ "res://.import/53 OLLIE oh god oh jeez.mp3-e9b504e4d0c34bd78773a0956ca60d68.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

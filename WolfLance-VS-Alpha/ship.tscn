@@ -17,7 +17,7 @@
 [ext_resource path="res://dodge_boost.wav" type="AudioStream" id=15]
 [ext_resource path="res://boost.wav" type="AudioStream" id=16]
 [ext_resource path="res://Shepard_Tone_Boost.mp3" type="AudioStream" id=17]
-[ext_resource path="res://Pause.gd" type="Script" id=18]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=18]
 [ext_resource path="res://bomb.tscn" type="PackedScene" id=19]
 [ext_resource path="res://TrueAim.gd" type="Script" id=20]
 
@@ -172,28 +172,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.73267, -27.3446 )
 
 [node name="PlayerStats" parent="." instance=ExtResource( 11 )]
 
-[node name="Pause" type="Control" parent="."]
-pause_mode = 2
-visible = false
-margin_right = 1027.0
-margin_bottom = 603.0
-script = ExtResource( 18 )
-
-[node name="Button" type="Button" parent="Pause"]
-pause_mode = 2
-margin_left = 46.0
-margin_top = 382.0
-margin_right = 168.0
-margin_bottom = 402.0
-text = "Resume"
-
-[node name="Button2" type="Button" parent="Pause"]
-pause_mode = 2
-margin_left = 46.0
-margin_top = 421.0
-margin_right = 168.0
-margin_bottom = 441.0
-text = "Quit"
+[node name="Pause" parent="." instance=ExtResource( 18 )]
 
 [node name="aimingOrient" type="Position3D" parent="."]
 transform = Transform( 1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, 2.52043e-05, -9.68687, -103.012 )
@@ -201,5 +180,3 @@ transform = Transform( 1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, 2.52043e-
 [connection signal="timeout" from="cannonballCooldown" to="." method="_on_Cooldown_timeout"]
 [connection signal="timeout" from="rollTimer" to="." method="_on_rollTimer_timeout"]
 [connection signal="finished" from="audioPlayers/boostSoundMaker" to="." method="_on_boostSoundMaker_finished"]
-[connection signal="pressed" from="Pause/Button" to="Pause" method="_on_Button_pressed"]
-[connection signal="pressed" from="Pause/Button2" to="Pause" method="_on_Button2_pressed"]

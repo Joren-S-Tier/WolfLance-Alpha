@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/7 OLLIE look around were trapped.mp3-27f5fa780df36dfca18dfe31342d1989.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/7 OLLIE look around were trapped.mp3"
+dest_files=[ "res://.import/7 OLLIE look around were trapped.mp3-27f5fa780df36dfca18dfe31342d1989.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

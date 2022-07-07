@@ -101,3 +101,7 @@ func display_subtitle(text):
 
 func _on_Timer_timeout():
 	$Subtitle.visible = false
+
+
+func _on_VideoPlayer_finished():
+	$VideoPlayer.visible=false

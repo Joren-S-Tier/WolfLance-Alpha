@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/24 OLLIE yes but thats not the point.mp3-724e67a1c3832bfb6d1aa19eacddd5e8.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/24 OLLIE yes but thats not the point.mp3"
+dest_files=[ "res://.import/24 OLLIE yes but thats not the point.mp3-724e67a1c3832bfb6d1aa19eacddd5e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

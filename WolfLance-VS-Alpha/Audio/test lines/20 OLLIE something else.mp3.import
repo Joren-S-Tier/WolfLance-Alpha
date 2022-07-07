@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/20 OLLIE something else.mp3-dd13c88ee1fe3efc2d29c90bd9a975e8.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/20 OLLIE something else.mp3"
+dest_files=[ "res://.import/20 OLLIE something else.mp3-dd13c88ee1fe3efc2d29c90bd9a975e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

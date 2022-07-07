@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/13 OLLIE but just to chat.mp3-398b6e13d640498dd31fc628e22f7f4b.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/13 OLLIE but just to chat.mp3"
+dest_files=[ "res://.import/13 OLLIE but just to chat.mp3-398b6e13d640498dd31fc628e22f7f4b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/40 DAK yeah but together separately.mp3-0eda8f42ea031f0a6dfb099918d02268.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/40 DAK yeah but together separately.mp3"
+dest_files=[ "res://.import/40 DAK yeah but together separately.mp3-0eda8f42ea031f0a6dfb099918d02268.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

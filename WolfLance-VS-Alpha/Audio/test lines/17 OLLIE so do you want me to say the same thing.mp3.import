@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/17 OLLIE so do you want me to say the same thing.mp3-4a119603778cfaee82b6140e4ab064d7.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/17 OLLIE so do you want me to say the same thing.mp3"
+dest_files=[ "res://.import/17 OLLIE so do you want me to say the same thing.mp3-4a119603778cfaee82b6140e4ab064d7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

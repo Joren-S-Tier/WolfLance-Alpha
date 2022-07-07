@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/38 DAK yeah the principal of uh.mp3-7e01af04cbb96a6f5bd4c69a72b5a857.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/38 DAK yeah the principal of uh.mp3"
+dest_files=[ "res://.import/38 DAK yeah the principal of uh.mp3-7e01af04cbb96a6f5bd4c69a72b5a857.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

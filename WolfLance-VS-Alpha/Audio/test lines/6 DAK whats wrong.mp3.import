@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/6 DAK whats wrong.mp3-29a018d6f844506d302bf8cc19d0313f.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/6 DAK whats wrong.mp3"
+dest_files=[ "res://.import/6 DAK whats wrong.mp3-29a018d6f844506d302bf8cc19d0313f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

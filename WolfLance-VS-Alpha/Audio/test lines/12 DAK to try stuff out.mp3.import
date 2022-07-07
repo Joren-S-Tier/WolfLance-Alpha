@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/12 DAK to try stuff out.mp3-3f8a6ae1e676990bb3eaaa1ef3d31c13.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/12 DAK to try stuff out.mp3"
+dest_files=[ "res://.import/12 DAK to try stuff out.mp3-3f8a6ae1e676990bb3eaaa1ef3d31c13.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

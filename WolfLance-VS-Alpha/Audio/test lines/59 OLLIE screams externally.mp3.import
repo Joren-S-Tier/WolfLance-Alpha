@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/59 OLLIE screams externally.mp3-4d8f8d1096c59876ffb8286c73b0983a.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/59 OLLIE screams externally.mp3"
+dest_files=[ "res://.import/59 OLLIE screams externally.mp3-4d8f8d1096c59876ffb8286c73b0983a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

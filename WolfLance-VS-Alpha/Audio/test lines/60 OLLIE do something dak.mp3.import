@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/60 OLLIE do something dak.mp3-5f014d6b7bfb990b8591e40684df4335.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/60 OLLIE do something dak.mp3"
+dest_files=[ "res://.import/60 OLLIE do something dak.mp3-5f014d6b7bfb990b8591e40684df4335.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

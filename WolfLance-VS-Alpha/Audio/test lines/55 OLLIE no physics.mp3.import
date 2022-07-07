@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/55 OLLIE no physics.mp3-994bb9528c9a98ade9e05230be4c107b.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/55 OLLIE no physics.mp3"
+dest_files=[ "res://.import/55 OLLIE no physics.mp3-994bb9528c9a98ade9e05230be4c107b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

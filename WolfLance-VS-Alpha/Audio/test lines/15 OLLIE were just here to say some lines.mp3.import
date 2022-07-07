@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/15 OLLIE were just here to say some lines.mp3-6d73b78e640e0a9ae4ceea7a9ed68790.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/15 OLLIE were just here to say some lines.mp3"
+dest_files=[ "res://.import/15 OLLIE were just here to say some lines.mp3-6d73b78e640e0a9ae4ceea7a9ed68790.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/58 DAK yep no physics.mp3-d8d4046813f724ef46360cb841b09dba.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/58 DAK yep no physics.mp3"
+dest_files=[ "res://.import/58 DAK yep no physics.mp3-d8d4046813f724ef46360cb841b09dba.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

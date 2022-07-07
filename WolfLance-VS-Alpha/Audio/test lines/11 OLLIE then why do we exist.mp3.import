@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/11 OLLIE then why do we exist.mp3-cb9de3b654641347ba5b325e150c7a7d.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/11 OLLIE then why do we exist.mp3"
+dest_files=[ "res://.import/11 OLLIE then why do we exist.mp3-cb9de3b654641347ba5b325e150c7a7d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

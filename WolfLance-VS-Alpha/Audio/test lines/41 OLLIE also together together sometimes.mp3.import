@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/41 OLLIE also together together sometimes.mp3-726a15e62be6f03b174a287170a145e1.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/41 OLLIE also together together sometimes.mp3"
+dest_files=[ "res://.import/41 OLLIE also together together sometimes.mp3-726a15e62be6f03b174a287170a145e1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

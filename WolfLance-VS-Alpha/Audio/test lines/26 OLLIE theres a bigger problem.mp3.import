@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/26 OLLIE theres a bigger problem.mp3-7d38e09a2df7de0e0dfeef34c42d72d6.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/26 OLLIE theres a bigger problem.mp3"
+dest_files=[ "res://.import/26 OLLIE theres a bigger problem.mp3-7d38e09a2df7de0e0dfeef34c42d72d6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/46 DAK its like a purgatory of some kind.mp3-2c8c81e9233d0e29d9e1490e1548d0f5.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/46 DAK its like a purgatory of some kind.mp3"
+dest_files=[ "res://.import/46 DAK its like a purgatory of some kind.mp3-2c8c81e9233d0e29d9e1490e1548d0f5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

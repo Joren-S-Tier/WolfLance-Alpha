@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/33 OLLIE ah yeah that sucks.mp3-d3d4dacfc48d9a7a35d1fdd643c91eee.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/33 OLLIE ah yeah that sucks.mp3"
+dest_files=[ "res://.import/33 OLLIE ah yeah that sucks.mp3-d3d4dacfc48d9a7a35d1fdd643c91eee.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

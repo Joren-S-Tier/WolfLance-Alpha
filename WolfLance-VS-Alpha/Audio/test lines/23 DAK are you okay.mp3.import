@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/23 DAK are you okay.mp3-3fff83afe2003b640e36eb341a4557f4.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/23 DAK are you okay.mp3"
+dest_files=[ "res://.import/23 DAK are you okay.mp3-3fff83afe2003b640e36eb341a4557f4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

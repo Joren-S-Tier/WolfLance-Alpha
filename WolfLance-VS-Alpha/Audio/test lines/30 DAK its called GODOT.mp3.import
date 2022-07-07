@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/30 DAK its called GODOT.mp3-4db4a8a5f2ed073c46d6f322772fb002.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/30 DAK its called GODOT.mp3"
+dest_files=[ "res://.import/30 DAK its called GODOT.mp3-4db4a8a5f2ed073c46d6f322772fb002.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

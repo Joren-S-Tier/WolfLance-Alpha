@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/9 OLLIE yeah what else would you call it.mp3-ec277bf89f8d71bad967007eaf868ab9.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/9 OLLIE yeah what else would you call it.mp3"
+dest_files=[ "res://.import/9 OLLIE yeah what else would you call it.mp3-ec277bf89f8d71bad967007eaf868ab9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/50 DAK or maybe were here forever.mp3-0ff5e4be0b7c29ef7fd1b6b1883e452f.mp3str"
+
+[deps]
+
+source_file="res://Audio/test lines/50 DAK or maybe were here forever.mp3"
+dest_files=[ "res://.import/50 DAK or maybe were here forever.mp3-0ff5e4be0b7c29ef7fd1b6b1883e452f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
