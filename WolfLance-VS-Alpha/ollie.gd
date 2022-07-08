@@ -9,6 +9,9 @@ var saidTheLine = false
 var player_in_range = false
 var can_talk = true
 var dialog = null
+onready var AudioPlayer = get_node("../AudioStreamPlayer")
+export(NodePath) var target_scene
+onready var target = get_node(target_scene)
 
 var choiceNum = 0
 
@@ -25,6 +28,7 @@ func _process(delta):
 	if (player_in_range &&Input.get_action_strength("shoot")>0 && can_talk):
 		match lineNumber:
 			0:
+				AudioPlayer.set_volume_db(-40)
 				dialog = Dialogic.start("ollie_tree")
 				add_child(dialog)
 				#lineNumber += 1
@@ -73,6 +77,7 @@ func _on_Area_body_entered(body):
 
 func _on_player_detection_area_area_exited(area):
 	player_in_range = false
+	AudioPlayer.set_volume_db(-30)
 
 
 func _on_Timer_timeout():

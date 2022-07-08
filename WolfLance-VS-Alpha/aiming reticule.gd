@@ -47,21 +47,21 @@ func _physics_process(delta):
 	#print (self.transform.origin.x)
 	#print (self.transform.origin.y)
 
-	if (noInput):
-		#print("no input")
-		if(timerRunning ==false):
-			$NoInputTimer.start()
-			timerRunning = true
-		if(noInputTimerWentOff):
-			var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
-			#print (position)
-			#print (self.transform.origin)
-			self.transform.origin = position
-	else:
-		noInputTimerWentOff = false
+#	if (noInput):
+#		#print("no input")
+#		if(timerRunning ==false):
+#			$NoInputTimer.start()
+#			timerRunning = true
+#		if(noInputTimerWentOff):
+#			var position = self.transform.origin.move_toward(aimOrient.transform.origin,delta * returnspeed)
+#			#print (position)
+#			#print (self.transform.origin)
+#			self.transform.origin = position
+#	else:
+#		noInputTimerWentOff = false
 
 
 
-func _on_NoInputTimer_timeout():
-	noInputTimerWentOff = true
-	timerRunning = false
+#func _on_NoInputTimer_timeout():
+#	noInputTimerWentOff = true
+#	timerRunning = false

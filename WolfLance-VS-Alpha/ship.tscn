@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=10]
 [ext_resource path="res://PlayerStats.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cannon Placeholder.tres" type="CubeMesh" id=12]
-[ext_resource path="res://image0018.png" type="Texture" id=13]
 [ext_resource path="res://hit.wav" type="AudioStream" id=14]
 [ext_resource path="res://dodge_boost.wav" type="AudioStream" id=15]
 [ext_resource path="res://boost.wav" type="AudioStream" id=16]
@@ -96,20 +95,6 @@ target_scene = NodePath("../../TrueAim")
 
 [node name="CannonBallSpawn" type="Position3D" parent="ShipMesh/Cannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0441799, 0.0375462, -2.33149 )
-
-[node name="reticule1" type="Sprite3D" parent="ShipMesh/Cannon"]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.77771e-06, 0, -32.6221 )
-visible = false
-modulate = Color( 0.258824, 0.247059, 0.247059, 1 )
-pixel_size = 0.03
-texture = ExtResource( 13 )
-
-[node name="reticule2" type="Sprite3D" parent="ShipMesh/Cannon"]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -2.72949e-05, 0, -92.5199 )
-visible = false
-modulate = Color( 0.768627, 0.0313726, 0.0313726, 1 )
-pixel_size = 0.02
-texture = ExtResource( 13 )
 
 [node name="DodgeEffect" type="Particles" parent="ShipMesh"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
