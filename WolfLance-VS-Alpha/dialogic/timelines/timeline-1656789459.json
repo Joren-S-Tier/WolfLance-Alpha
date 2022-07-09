@@ -396,6 +396,10 @@
 			"text": "Well hurry up. I saw Ted’s latest blender model and it makes me wanna shit."
 		},
 		{
+			"emit_signal": "2",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "GODOT",
 			"condition": "",
 			"definition": "",

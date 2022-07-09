@@ -16,6 +16,7 @@ var choiceNum = 0
 func _ready():
 	player_in_range = false
 	$PlayerDetectionTimer.start()
+	$ollietpose/AnimationPlayer.play("ollieIdle")
 
 
 
