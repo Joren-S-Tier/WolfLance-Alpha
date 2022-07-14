@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://CameraHolder.gd" type="Script" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://CameraOrbit.gd" type="Script" id=4]
 [ext_resource path="res://murasama placeholder.webm" type="VideoStream" id=5]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player animation test.tscn" type="PackedScene" id=7]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.197812, 0.214358, 0.21664 )
@@ -21,6 +22,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+visible = false
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -63,5 +65,10 @@ stream = ExtResource( 5 )
 
 [node name="Pause" parent="." instance=ExtResource( 6 )]
 
+[node name="player animation test" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.270835, 0 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+
+[editable path="player animation test"]
