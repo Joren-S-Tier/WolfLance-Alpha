@@ -1,8 +1,10 @@
 extends KinematicBody
 
 var moveSpeed = 10.0
-var jumpSpeed = 10.0
+var jumpSpeed = 12.5
 var gravity = 15.0
+var anim_player
+var is_moving = false
 
 var velocity = Vector3()
 onready var camera = $CameraOrbit
@@ -14,6 +16,8 @@ var rotate_up = Vector3(1, 0, 0)
 func _ready():
 	rotate_up = rotate_up.normalized()
 	pass # Replace with function body.
+	anim_player = get_node("player animation test/AnimationPlayer")
+	anim_player.play("idle")
 
 
 func _physics_process(delta):
@@ -25,14 +29,21 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("move_up"):
 		input.z+=1
+		is_moving = true
 	if Input.is_action_pressed("move_down"):
 		input.z-=1
+		is_moving = true
 	if Input.is_action_pressed("move_right"):
 		input.x-= 1
+		is_moving = true
 	if Input.is_action_pressed("move_left"):
 		input.x +=1
+		is_moving = true
 	
 	input = input.normalized()
+	
+	if input == Vector3.ZERO:
+		is_moving = false
 	
 	var dir = (transform.basis.z * input.z + transform.basis.x * input.x)
 	
@@ -79,7 +90,15 @@ func _physics_process(delta):
 		#print (SpringArm.rotation.x)
 		#SpringArm.rotate_object_local(rotate_up, -.01)
 	
+	var anim_to_play = "idle"
+	if is_moving:
+		anim_to_play = "walk"
+	else:
+		anim_to_play = "idle"
 	
+	var current_anim = anim_player.get_current_animation()
+	if current_anim != anim_to_play:
+		anim_player.play(anim_to_play)
 	
 	#var direction = (SpringArm.transform.basis.z * input.z), (SpringArm.transform.basis.x *input.x)
 	#velocity.x = direction.x * moveSpeed
@@ -87,9 +106,9 @@ func _physics_process(delta):
 	velocity.y -= gravity * delta
 	
 	
-	if Input.is_action_pressed("boosting") and is_on_floor():
-		#velocity.y = jumpSpeed
-		pass
+	if Input.is_action_pressed("dodge roll") and is_on_floor():
+		velocity.y = jumpSpeed
+		
 	velocity = move_and_slide(velocity, Vector3.UP)
 
 func display_subtitle(text):
