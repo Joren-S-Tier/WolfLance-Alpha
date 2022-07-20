@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://3d  test level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ollie.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Music/PSO_loop.mp3" type="AudioStream" id=6]
 [ext_resource path="res://movieTrigger.gd" type="Script" id=7]
+[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=8]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -60,9 +61,10 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -9.34044, -29.0679, -56.
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -20.0
+volume_db = -30.0
 autoplay = true
+script = ExtResource( 8 )
 
 [connection signal="body_entered" from="SceneChanger/SceneChangerArea" to="SceneChanger" method="_on_SceneChangerArea_body_entered"]
-[connection signal="body_entered" from="movieTrigger/movieTriggerArea" to="movieTrigger" method="_on_movieTriggerArea_body_entered"]
 [connection signal="body_entered" from="movieTrigger/movieTriggerArea" to="movieTrigger" method="_on_SceneChangerArea_body_entered"]
+[connection signal="body_entered" from="movieTrigger/movieTriggerArea" to="movieTrigger" method="_on_movieTriggerArea_body_entered"]
