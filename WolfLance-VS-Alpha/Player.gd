@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var moveSpeed = 10.0
-var jumpSpeed = 10.0
+var jumpSpeed = 12.5
 var gravity = 15.0
 var anim_player
 var is_moving = false
@@ -106,9 +106,9 @@ func _physics_process(delta):
 	velocity.y -= gravity * delta
 	
 	
-	if Input.is_action_pressed("boosting") and is_on_floor():
-		#velocity.y = jumpSpeed
-		pass
+	if Input.is_action_pressed("dodge roll") and is_on_floor():
+		velocity.y = jumpSpeed
+		
 	velocity = move_and_slide(velocity, Vector3.UP)
 
 func display_subtitle(text):
