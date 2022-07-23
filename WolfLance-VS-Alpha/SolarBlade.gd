@@ -1,4 +1,4 @@
-extends KinematicBody
+extends RigidBody
 
 
 # Declare member variables here. Examples:
@@ -9,6 +9,7 @@ extends KinematicBody
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.start(.25)
+	self.look_at(target.global_transform.origin, Vector3.UP)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

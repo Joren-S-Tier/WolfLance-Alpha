@@ -53,3 +53,9 @@ func _on_PlayerDetection_body_entered(body):
 	if(body.is_in_group("Player")):
 		target = body
 		player_position = body.global_transform.origin
+
+
+func _on_Area_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if(area.is_in_group("Projectile")):
+		take_damage(1)
+		#print ("hit")lace with function body.

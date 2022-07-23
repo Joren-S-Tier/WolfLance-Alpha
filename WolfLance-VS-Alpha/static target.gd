@@ -37,3 +37,8 @@ func _on_Area_body_entered(body):
 		queue_free()
 	#print ("hit")
 	#queue_free()
+
+
+func _on_Area_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if(area.is_in_group("Projectile")):
+		take_damage(1)

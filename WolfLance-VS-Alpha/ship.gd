@@ -11,6 +11,7 @@ onready var railcart = get_node("/root/main/rail/railcart")
 onready var cannon = get_node("/root/main/rail/railcart/ship/ShipMesh/Cannon")
 onready var ShipMesh = get_node("/root/main/rail/railcart/ship/ShipMesh")
 onready var ShipOrient = get_node("/root/main/rail/railcart/ShipOrient")
+onready var AimOrient = get_node("/root/main/rail/railcart/ship/TrueAim")
 onready var bEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/BoostEffect")
 onready var dEmitter = get_node("/root/main/rail/railcart/ship/ShipMesh/DodgeEffect")
 var right_boundry = 50
@@ -168,6 +169,7 @@ func shoot():
 				#print ("RailCart Basis.Z=", rnr)
 				var vectorProduct = cnr * -1
 				#print ("Vector Product=", vectorProduct)
+				new_solar_blade.look_at(AimOrient.global_transform.origin,Vector3.UP)
 				new_solar_blade.linear_velocity = vectorProduct * shoot_strength
 				cannonFireAudioPlayer.play()
 				can_shoot = false
