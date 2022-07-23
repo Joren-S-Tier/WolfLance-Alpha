@@ -22,6 +22,7 @@ material/0 = SubResource( 3 )
 [node name="Area" type="Area" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" groups=["Enemy"]]
+transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="PlayerDetection" type="Area" parent="." groups=["Enemy"]]

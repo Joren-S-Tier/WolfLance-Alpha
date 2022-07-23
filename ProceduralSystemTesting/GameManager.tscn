@@ -1,11 +1,55 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameManager.gd" type="Script" id=1]
+[ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=2]
+[ext_resource path="res://addons/zylann.hterrain/hterrain_texture_set.gd" type="Script" id=3]
+[ext_resource path="res://addons/zylann.hterrain/data.hterrain" type="Resource" id=4]
+[ext_resource path="res://Assets/GrassTexture-PreProcessing.jpg" type="Texture" id=5]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.0941176, 0.501961, 0.729412, 1 )
+ground_bottom_color = Color( 0.337255, 0.490196, 0.27451, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+mode = 0
+textures = [ [ ExtResource( 5 ) ], [ null ] ]
 
 [node name="GameManager" type="Node"]
 script = ExtResource( 1 )
-Seed = "AnotherSeed"
 
 [node name="DevCamera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16826, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.1487, 0 )
+current = true
 far = 1000.0
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Environment" type="WorldEnvironment" parent="World"]
+environment = SubResource( 2 )
+
+[node name="HTerrain" type="Spatial" parent="World"]
+script = ExtResource( 2 )
+map_scale = Vector3( 2, 2, 2 )
+centered = true
+_terrain_data = ExtResource( 4 )
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource( 3 )
+render_layers = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = false
+shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="World"]
+transform = Transform( 1, 0, 0, 0, -0.661835, 0.749649, 0, -0.749649, -0.661835, 0, 45.7627, 0 )

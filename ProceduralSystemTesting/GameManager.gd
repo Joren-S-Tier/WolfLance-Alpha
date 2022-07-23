@@ -2,7 +2,7 @@ extends Node
 
 
 export var Seed = "PlanetName";
-export var NodeCount = 50;
+export var PointCount = 50;
 var rngX;
 var rngY;
 var counter;
@@ -36,9 +36,9 @@ func railgen():
 	newrail.set_bake_interval(50);
 	var C = Vector3.ZERO;
 	newrail.add_point(C)
-	for p in NodeCount:
-		C.x = C.x + rngX.randi_range(0,10) -5
-		C.y = C.y + rngY.randi_range(0,10) -5
+	for p in PointCount:
+		C.x = C.x + rngX.randi_range(0,10)-5
+		C.y = C.y + rngY.randi_range(0,10)-5
 		C.z = C.z - 10
 		
 		newrail.add_point(C)
