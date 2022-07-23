@@ -5,6 +5,7 @@ export var max_health = 3
 export var current_health = 3
 export var ship_speed = 5
 export var roll_speed = 10
+export var shooting_mode = 1
 var velocity = Vector3.ZERO
 onready var railcart = get_node("/root/main/rail/railcart")
 onready var cannon = get_node("/root/main/rail/railcart/ship/ShipMesh/Cannon")
@@ -28,6 +29,7 @@ var first_boost = true
 
 export (PackedScene) var cannonball = null
 export (PackedScene) var bomb = null
+export (PackedScene) var solarBlade = null
 export var shoot_strength = 750
 var can_shoot = true
 var mouse_is_down = false
@@ -139,20 +141,37 @@ func _on_PlayerStats_no_health():
 	pass
 	
 func shoot():
-	if can_shoot:
-		var cnr = cannon.global_transform.basis.z
-		var rnr = railcart.transform.basis.z
-		var new_cannon_ball = cannonball.instance()
-		$cannonballs.add_child(new_cannon_ball)
-		new_cannon_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
-		#print ("cannon Basis.Z=", cnr)
-		#print ("RailCart Basis.Z=", rnr)
-		var vectorProduct = cnr * -1
-		#print ("Vector Product=", vectorProduct)
-		new_cannon_ball.linear_velocity = vectorProduct * shoot_strength
-		cannonFireAudioPlayer.play()
-		can_shoot = false
-		$cannonballCooldown.start()
+	match shooting_mode:
+		0:
+			if can_shoot:
+				var cnr = cannon.global_transform.basis.z
+				var rnr = railcart.transform.basis.z
+				var new_cannon_ball = cannonball.instance()
+				$cannonballs.add_child(new_cannon_ball)
+				new_cannon_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+				#print ("cannon Basis.Z=", cnr)
+				#print ("RailCart Basis.Z=", rnr)
+				var vectorProduct = cnr * -1
+				#print ("Vector Product=", vectorProduct)
+				new_cannon_ball.linear_velocity = vectorProduct * shoot_strength
+				cannonFireAudioPlayer.play()
+				can_shoot = false
+				$cannonballCooldown.start()
+		1:
+			if can_shoot:
+				var cnr = cannon.global_transform.basis.z
+				var rnr = railcart.transform.basis.z
+				var new_solar_blade = solarBlade.instance()
+				$cannonballs.add_child(new_solar_blade)
+				new_solar_blade.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+				#print ("cannon Basis.Z=", cnr)
+				#print ("RailCart Basis.Z=", rnr)
+				var vectorProduct = cnr * -1
+				#print ("Vector Product=", vectorProduct)
+				new_solar_blade.linear_velocity = vectorProduct * shoot_strength
+				cannonFireAudioPlayer.play()
+				can_shoot = false
+				$cannonballCooldown.start()
 
 
 func _on_boostSoundMaker_finished():

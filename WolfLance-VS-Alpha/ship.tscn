@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://aimingReticule.tscn" type="PackedScene" id=10]
 [ext_resource path="res://PlayerStats.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cannon Placeholder.tres" type="CubeMesh" id=12]
+[ext_resource path="res://SolarBlade.tscn" type="PackedScene" id=13]
 [ext_resource path="res://hit.wav" type="AudioStream" id=14]
 [ext_resource path="res://dodge_boost.wav" type="AudioStream" id=15]
 [ext_resource path="res://boost.wav" type="AudioStream" id=16]
@@ -63,6 +64,7 @@ current_health = 5
 ship_speed = 20
 cannonball = ExtResource( 6 )
 bomb = ExtResource( 19 )
+solarBlade = ExtResource( 13 )
 shoot_strength = 1500
 
 [node name="aimingReticule" parent="." instance=ExtResource( 10 )]
