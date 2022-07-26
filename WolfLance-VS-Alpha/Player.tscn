@@ -54,6 +54,7 @@ script = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="CameraOrbit"]
 transform = Transform( -1, 0, -8.74228e-08, -2.31671e-08, 0.964248, 0.265001, 8.42973e-08, 0.265001, -0.964248, 0, 2, -5 )
+far = 20000.0
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 visible = false
