@@ -96,6 +96,11 @@ func _physics_process(delta):
 		shoot()
 	if Input.get_action_strength("bomb"):
 		shoot_bomb()
+	if Input.is_action_just_released("shoot"):
+		$ShipMesh/Cannon/Laser.visible = false
+		$ShipMesh/Cannon/Laser/MeshInstance.visible = false
+		$ShipMesh/Cannon/Laser/Area/CollisionShape.disabled = true
+	
 
 func dodgeRoll():
 	translate_object_local(velocity * roll_speed)
@@ -174,6 +179,26 @@ func shoot():
 				cannonFireAudioPlayer.play()
 				can_shoot = false
 				$cannonballCooldown.start()
+		2:
+			if can_shoot:
+				var cnr = cannon.global_transform.basis.z
+				var rnr = railcart.transform.basis.z
+				var new_bomb = bomb.instance()
+				$cannonballs.add_child(new_bomb)
+				new_bomb.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+				#print ("cannon Basis.Z=", cnr)
+				#print ("RailCart Basis.Z=", rnr)
+				var vectorProduct = cnr * -1
+				#print ("Vector Product=", vectorProduct)
+				new_bomb.linear_velocity = vectorProduct * shoot_strength
+				cannonFireAudioPlayer.play()
+				can_shoot = false
+				$cannonballCooldown.start()
+		3:
+			$ShipMesh/Cannon/Laser.visible = true
+			$ShipMesh/Cannon/Laser/MeshInstance.visible = true
+			$ShipMesh/Cannon/Laser/Area/CollisionShape.disabled = false
+
 
 
 func _on_boostSoundMaker_finished():
