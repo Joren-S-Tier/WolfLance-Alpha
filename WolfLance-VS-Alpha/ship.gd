@@ -5,7 +5,7 @@ export var max_health = 3
 export var current_health = 3
 export var ship_speed = 5
 export var roll_speed = 10
-export var shooting_mode = 1
+export var shooting_mode = 0
 var velocity = Vector3.ZERO
 onready var railcart = get_node("/root/main/rail/railcart")
 onready var cannon = get_node("/root/main/rail/railcart/ship/ShipMesh/Cannon")
@@ -25,12 +25,14 @@ var down_position = Vector2(0.0, 0.0)
 var z_rot = 0.0
 var z_rot_max = 1
 var first_boost = true
+var charging = false
 
 #onready var playerStats = get_node("PlayerStats")
 
 export (PackedScene) var cannonball = null
 export (PackedScene) var bomb = null
 export (PackedScene) var solarBlade = null
+export (PackedScene) var bigBall = null
 export var shoot_strength = 750
 var can_shoot = true
 var mouse_is_down = false
@@ -100,6 +102,43 @@ func _physics_process(delta):
 		$ShipMesh/Cannon/Laser.visible = false
 		$ShipMesh/Cannon/Laser/MeshInstance.visible = false
 		$ShipMesh/Cannon/Laser/Area/CollisionShape.disabled = true
+	
+	if Input.is_action_just_pressed("changeWeapon"):
+		print ("weapon change")
+		shooting_mode += 1
+		if(shooting_mode>=5):
+			shooting_mode = 0
+	if Input.is_action_just_released("shoot"):
+		if shooting_mode==4 && $ShipMesh/Cannon/CannonBallSpawn.get_child(0)!=null:
+			#$ShipMesh/Cannon/CannonBallSpawn.get_child(0).cnr =cannon.global_transform.basis.z
+			#$ShipMesh/Cannon/CannonBallSpawn.get_child(0).rnr =railcart.transform.basis.z
+			var charge_stage = $ShipMesh/Cannon/CannonBallSpawn.get_child(0)
+			var cnr = cannon.global_transform.basis.z
+			var rnr = railcart.transform.basis.z
+			var new_big_ball = bigBall.instance()
+			$cannonballs.add_child(new_big_ball)
+			new_big_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+			new_big_ball.charge_stage = charge_stage
+			new_big_ball.ball_change(charge_stage)
+			#print ("cannon Basis.Z=", cnr)
+			#print ("RailCart Basis.Z=", rnr)
+			var vectorProduct = cnr * -1
+			#print ("Vector Product=", vectorProduct)
+			new_big_ball.linear_velocity = vectorProduct * shoot_strength
+			cannonFireAudioPlayer.play()
+			new_big_ball.release()
+			can_shoot = false
+			$cannonballCooldown.start()
+			print ("big Ball release")
+			for n in $ShipMesh/Cannon/CannonBallSpawn.get_children():
+				n.remove_child(n)
+				n.queue_free()
+			
+			#$ShipMesh/Cannon/CannonBallSpawn.get_child(0).release()
+	
+	
+#	if shooting_mode == 4 && charging ==true && Input.is_action_just_released("shoot"):
+#		pass
 	
 
 func dodgeRoll():
@@ -198,6 +237,21 @@ func shoot():
 			$ShipMesh/Cannon/Laser.visible = true
 			$ShipMesh/Cannon/Laser/MeshInstance.visible = true
 			$ShipMesh/Cannon/Laser/Area/CollisionShape.disabled = false
+		4:
+			if can_shoot:
+				print ("big ball")
+				var cnr = cannon.global_transform.basis.z
+				var rnr = railcart.transform.basis.z
+				var new_big_ball = bigBall.instance()
+				$ShipMesh/Cannon/CannonBallSpawn.add_child(new_big_ball)
+				new_big_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+				can_shoot = false
+#				if Input.is_action_just_released("shoot"):
+#					var vectorProduct = cnr * -1
+#					new_big_ball.linear_velocity = vectorProduct * shoot_strength
+#					cannonFireAudioPlayer.play()
+#					$cannonballCooldown.start()
+
 
 
 

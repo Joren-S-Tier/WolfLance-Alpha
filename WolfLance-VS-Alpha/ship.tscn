@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://bomb.tscn" type="PackedScene" id=19]
 [ext_resource path="res://TrueAim.gd" type="Script" id=20]
 [ext_resource path="res://Laser.gd" type="Script" id=21]
+[ext_resource path="res://bigBall.tscn" type="PackedScene" id=22]
 
 [sub_resource type="CylinderMesh" id=9]
 
@@ -79,6 +80,7 @@ shooting_mode = 3
 cannonball = ExtResource( 6 )
 bomb = ExtResource( 19 )
 solarBlade = ExtResource( 13 )
+bigBall = ExtResource( 22 )
 shoot_strength = 1500
 
 [node name="aimingReticule" parent="." instance=ExtResource( 10 )]
@@ -105,7 +107,6 @@ script = ExtResource( 14 )
 [node name="Cannon" type="MeshInstance" parent="ShipMesh"]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -9.68687, 9.85047 )
 mesh = ExtResource( 12 )
-material/0 = null
 script = ExtResource( 9 )
 target_scene = NodePath("../../TrueAim")
 
