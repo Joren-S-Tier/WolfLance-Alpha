@@ -11,6 +11,7 @@ var material : SpatialMaterial = null
 var default_color = null
 var middle_color = Color.yellow
 var final_color = Color.red
+var can_charge = true
 
 # Declare member variables here. Examples:
 #ShipMesh/Cannon/CannonBallSpawn
@@ -44,8 +45,8 @@ func _on_Timer_timeout():
 
 func advance_charge():
 	charge_stage += 1
-	if charge_stage >= 3:
-		charge_stage =3
+	if charge_stage >= 4:
+		charge_stage =4
 	ball_change(charge_stage)
 
 func ball_change(charge_stage):
@@ -58,11 +59,22 @@ func ball_change(charge_stage):
 			var newMaterial = SpatialMaterial.new()
 			newMaterial.albedo_color = Color.red
 			$"MeshInstance".material_override = newMaterial
+			#self.scale =Vector3(12,12,12)
+			self.scale =Vector3(16,16,16)
 		3:
 			print ("big ball stage 3")
 			var newMaterial = SpatialMaterial.new()
 			newMaterial.albedo_color = Color.purple
 			$"MeshInstance".material_override = newMaterial
+			#self.scale =Vector3(18,18,18)
+			self.scale =Vector3(32,32,32)
+		4:
+			print ("max")
+			var newMaterial = SpatialMaterial.new()
+			newMaterial.albedo_color = Color.purple
+			$"MeshInstance".material_override = newMaterial
+			self.scale =Vector3(32,32,32)
+			
 	
 
 

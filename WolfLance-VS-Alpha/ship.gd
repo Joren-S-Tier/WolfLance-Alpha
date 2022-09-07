@@ -112,7 +112,7 @@ func _physics_process(delta):
 		if shooting_mode==4 && $ShipMesh/Cannon/CannonBallSpawn.get_child(0)!=null:
 			#$ShipMesh/Cannon/CannonBallSpawn.get_child(0).cnr =cannon.global_transform.basis.z
 			#$ShipMesh/Cannon/CannonBallSpawn.get_child(0).rnr =railcart.transform.basis.z
-			var charge_stage = $ShipMesh/Cannon/CannonBallSpawn.get_child(0)
+			var charge_stage = $ShipMesh/Cannon/CannonBallSpawn.get_child(0).charge_stage
 			var cnr = cannon.global_transform.basis.z
 			var rnr = railcart.transform.basis.z
 			var new_big_ball = bigBall.instance()
@@ -239,13 +239,14 @@ func shoot():
 			$ShipMesh/Cannon/Laser/Area/CollisionShape.disabled = false
 		4:
 			if can_shoot:
-				print ("big ball")
-				var cnr = cannon.global_transform.basis.z
-				var rnr = railcart.transform.basis.z
-				var new_big_ball = bigBall.instance()
-				$ShipMesh/Cannon/CannonBallSpawn.add_child(new_big_ball)
-				new_big_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
-				can_shoot = false
+				if $ShipMesh/Cannon/CannonBallSpawn.get_child_count()==0:
+					print ("big ball")
+					var cnr = cannon.global_transform.basis.z
+					var rnr = railcart.transform.basis.z
+					var new_big_ball = bigBall.instance()
+					$ShipMesh/Cannon/CannonBallSpawn.add_child(new_big_ball)
+					new_big_ball.global_transform.origin = $ShipMesh/Cannon/CannonBallSpawn.global_transform.origin
+					can_shoot = false
 #				if Input.is_action_just_released("shoot"):
 #					var vectorProduct = cnr * -1
 #					new_big_ball.linear_velocity = vectorProduct * shoot_strength
