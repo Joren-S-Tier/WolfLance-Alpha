@@ -35,15 +35,19 @@ one_shot = true
 
 [node name="Explosion2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -5.0
 
 [node name="Explosion3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -5.0
 
 [node name="Explosion4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -5.0
 
 [node name="Explosion1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -5.0
 
 [node name="EndTimer" type="Timer" parent="."]
 wait_time = 3.0

@@ -2,9 +2,9 @@
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
 [ext_resource path="res://STEEL GRAY.material" type="Material" id=2]
-[ext_resource path="res://Material_003.material" type="Material" id=3]
-[ext_resource path="res://Material_002.material" type="Material" id=4]
-[ext_resource path="res://spearship.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://spaceship.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://ollie_Belt.material" type="Material" id=4]
+[ext_resource path="res://ollie_ColorOveralls.material" type="Material" id=5]
 [ext_resource path="res://cannonball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://roll.tres" type="Animation" id=7]
 [ext_resource path="res://shot.wav" type="AudioStream" id=8]
@@ -98,10 +98,10 @@ script = ExtResource( 20 )
 
 [node name="ShipMesh" type="MeshInstance" parent="."]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 3 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 2 )
 material/1 = ExtResource( 4 )
-material/2 = ExtResource( 2 )
+material/2 = ExtResource( 5 )
 script = ExtResource( 14 )
 
 [node name="Cannon" type="MeshInstance" parent="ShipMesh"]
