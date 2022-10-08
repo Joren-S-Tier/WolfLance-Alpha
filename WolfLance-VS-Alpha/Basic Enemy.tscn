@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Basic Enemy.gd" type="Script" id=1]
-[ext_resource path="res://seeker mine.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://spacemine.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://glowing red.material" type="Material" id=3]
 [ext_resource path="res://ollie_Belt.material" type="Material" id=4]
 
@@ -14,6 +14,7 @@ collision/safe_margin = 0.5
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="." groups=["Enemy"]]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 mesh = ExtResource( 2 )
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )

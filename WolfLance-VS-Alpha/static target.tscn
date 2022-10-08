@@ -3,7 +3,7 @@
 [ext_resource path="res://static target.gd" type="Script" id=1]
 [ext_resource path="res://yellow.material" type="Material" id=2]
 [ext_resource path="res://ollie_Belt.material" type="Material" id=3]
-[ext_resource path="res://spacemine.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://seeker mine.obj" type="ArrayMesh" id=4]
 
 [sub_resource type="SphereShape" id=1]
 
