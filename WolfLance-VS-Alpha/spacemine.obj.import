@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/spacemine.obj-0fa0876e05f768e61a5eb2a8090a40eb.mesh"
+
+[deps]
+
+files=[ "res://.import/spacemine.obj-0fa0876e05f768e61a5eb2a8090a40eb.mesh" ]
+
+source_file="res://spacemine.obj"
+dest_files=[ "res://.import/spacemine.obj-0fa0876e05f768e61a5eb2a8090a40eb.mesh", "res://.import/spacemine.obj-0fa0876e05f768e61a5eb2a8090a40eb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
