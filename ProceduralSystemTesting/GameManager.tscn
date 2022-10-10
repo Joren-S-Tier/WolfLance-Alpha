@@ -34,6 +34,7 @@ environment = SubResource( 2 )
 
 [node name="HTerrain" type="Spatial" parent="World"]
 script = ExtResource( 2 )
+lod_scale = 2.0
 map_scale = Vector3( 2, 2, 2 )
 centered = true
 _terrain_data = ExtResource( 4 )
