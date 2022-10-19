@@ -1,12 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Basic Ranged Enemy.gd" type="Script" id=1]
 [ext_resource path="res://enemyCannonball.tscn" type="PackedScene" id=2]
-
-[sub_resource type="SphereMesh" id=2]
-
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.0392157, 0.141176, 0.976471, 1 )
+[ext_resource path="res://ollie_ColorOveralls.material" type="Material" id=3]
+[ext_resource path="res://ollie_Belt.material" type="Material" id=4]
+[ext_resource path="res://ranged enemy.obj" type="ArrayMesh" id=5]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -15,8 +13,9 @@ script = ExtResource( 1 )
 enemyCannonball = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 3 )
 
 [node name="Area" type="Area" parent="."]
 

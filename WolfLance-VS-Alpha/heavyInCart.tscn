@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://heavyInCart.gd" type="Script" id=1]
+[ext_resource path="res://heavy.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://ollie_ColorGogglesmat_001.material" type="Material" id=3]
+[ext_resource path="res://STEEL GRAY.material" type="Material" id=4]
+[ext_resource path="res://ollie_ColorOveralls.material" type="Material" id=5]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="SphereShape" id=4]
+
+[sub_resource type="SphereShape" id=5]
+radius = 38.3799
+
+[node name="heavy" type="KinematicBody" groups=["Enemy"]]
+collision/safe_margin = 0.1
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 3 )
+material/2 = ExtResource( 5 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0 )
+shape = SubResource( 4 )
+
+[node name="Area2" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area2"]
+shape = SubResource( 5 )
+
+[connection signal="area_shape_entered" from="Area" to="." method="_on_Area_area_shape_entered"]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area2" to="." method="_on_Area2_body_entered"]

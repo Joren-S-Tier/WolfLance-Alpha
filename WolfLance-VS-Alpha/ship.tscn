@@ -105,7 +105,7 @@ material/2 = ExtResource( 5 )
 script = ExtResource( 14 )
 
 [node name="Cannon" type="MeshInstance" parent="ShipMesh"]
-transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -9.68687, 9.85047 )
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.18024e-07, -5.67422, 9.85047 )
 mesh = ExtResource( 12 )
 script = ExtResource( 9 )
 target_scene = NodePath("../../TrueAim")
@@ -149,7 +149,7 @@ process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
 
 [node name="BoostEffect" type="Particles" parent="ShipMesh"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.20619e-06, -5.09436, -13.7972 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.77068e-07, -1.3502, -8.48324 )
 amount = 100
 lifetime = 0.15
 local_coords = false
