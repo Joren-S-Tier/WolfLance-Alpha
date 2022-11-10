@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 enemyCannonball = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 0, 0, 0 )
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 4 )
 material/1 = ExtResource( 3 )
@@ -23,13 +24,13 @@ material/1 = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="PlayerDetection" type="Area" parent="."]
-transform = Transform( 25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0 )
+transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="PlayerDetection"]
 shape = SubResource( 1 )
 
 [node name="cannonfireSpawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92894, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.97302 )
 
 [node name="Cannonballs" type="Node2D" parent="."]
 

@@ -36,6 +36,7 @@ func _physics_process(delta):
 			self.look_at(target.global_transform.origin, Vector3.UP)
 			var direction = self.global_transform.basis.z
 			var new_cannonball = enemyCannonball.instance()
+			new_cannonball.rotation = self.rotation
 			$Cannonballs.add_child(new_cannonball)
 			new_cannonball.global_transform.origin = $cannonfireSpawn.global_transform.origin
 			new_cannonball.linear_velocity = direction * shoot_strength * -1
