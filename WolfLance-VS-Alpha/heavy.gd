@@ -5,6 +5,7 @@ export (PackedScene) var heavy = null
 export var health = 1
 export var attack = 1
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -51,5 +52,7 @@ func _on_Area2_body_entered(body):
 		var railcart = get_node("%railcart")
 		var new_heavy = heavy.instance()
 		railcart.add_child(new_heavy)
+		new_heavy.player = body
+		new_heavy.global_transform.origin = body.global_transform.origin + body.transform.basis.z *40
 		queue_free()
 		

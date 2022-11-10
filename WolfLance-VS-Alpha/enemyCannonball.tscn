@@ -18,7 +18,6 @@ albedo_color = Color( 0, 0, 0, 1 )
 radius = 0.25
 
 [node name="cannonball" type="RigidBody"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 physics_material_override = SubResource( 4 )
 script = ExtResource( 1 )
 

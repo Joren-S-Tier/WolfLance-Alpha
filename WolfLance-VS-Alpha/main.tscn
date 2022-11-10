@@ -630,6 +630,7 @@ target_scene1 = NodePath("../RailOrient")
 cartspeed = 100
 
 [node name="ship" parent="rail/railcart" groups=["Player"] instance=ExtResource( 4 )]
+unique_name_in_owner = true
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 axis_lock_motion_x = true
 axis_lock_motion_y = true
@@ -773,7 +774,7 @@ speed = 15
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.769, 0, 0 )
 
 [node name="heavy" parent="." instance=ExtResource( 17 )]
-transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 552.555, 149.035, -1643.09 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1569, 74.5116, -442.938 )
 
 [connection signal="tree_entered" from="rail" to="rail/railcart/ship" method="_on_rail_tree_entered"]
 [connection signal="timeout" from="rail/railcart/ShipOrient2/rollTimer" to="rail/railcart/ShipOrient2" method="_on_rollTimer_timeout"]

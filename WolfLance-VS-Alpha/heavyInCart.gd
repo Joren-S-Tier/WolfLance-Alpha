@@ -4,7 +4,9 @@ export (PackedScene) var heavy = null
 
 export var health = 1
 export var attack = 1
-
+onready var railcart = get_node("%railcart")
+onready var player = null
+export (PackedScene) var cannonball = null
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -44,7 +46,14 @@ func _on_Area_area_shape_entered(area_rid, area, area_shape_index, local_shape_i
 	if(area.is_in_group("Projectile")):
 		take_damage(1)
 
+func _process(delta):
+	if player:
+		self.look_at(player.global_transform.origin, Vector3.UP)
+		print("look")
+	
 
 func _on_Area2_body_entered(body):
 	pass
 	
+
+

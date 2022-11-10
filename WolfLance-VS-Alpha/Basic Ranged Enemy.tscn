@@ -31,7 +31,7 @@ shape = SubResource( 1 )
 [node name="cannonfireSpawn" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92894, 0, 0 )
 
-[node name="Cannonballs" type="Spatial" parent="."]
+[node name="Cannonballs" type="Node2D" parent="."]
 
 [node name="Cooldown" type="Timer" parent="."]
 

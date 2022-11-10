@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://frog_eye.material" type="Material" id=1]
+[ext_resource path="res://belly.material" type="Material" id=2]
+[ext_resource path="res://frog_pupil.material" type="Material" id=3]
+[ext_resource path="res://frog_skin.material" type="Material" id=4]
+[ext_resource path="res://frog_Anim (2).gltf" type="PackedScene" id=5]
+
+[node name="frog_Anim (2)" instance=ExtResource( 5 )]
+
+[node name="Circle" parent="Armature/Skeleton" index="0"]
+material/0 = ExtResource( 4 )
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 1 )
+material/3 = ExtResource( 3 )

@@ -1,6 +1,7 @@
 extends RigidBody
 export var attack = 1
 
+export var speed = 10
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
