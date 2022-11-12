@@ -26,3 +26,14 @@ func _on_cannonball_body_entered(body):
 		body.player_takes_damage(attack)
 	#print ("hit")
 	queue_free()
+
+func hit(body):
+	if(body.is_in_group("Player")):
+		body.player_takes_damage(attack)
+	#print ("hit")
+	queue_free()
+
+
+func _on_Area_body_entered(body):
+	if body.is_in_group("Player"):
+		hit(body)

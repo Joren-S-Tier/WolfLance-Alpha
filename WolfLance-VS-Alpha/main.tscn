@@ -775,7 +775,7 @@ speed = 15
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.769, 0, 0 )
 
 [node name="heavy" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1569, 74.5116, -442.938 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -15.1569, 74.5116, -1261.84 )
 
 [node name="BasicRangedEnemy" parent="." instance=ExtResource( 10 )]
 transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -127.856, 33.5033, -1117.97 )

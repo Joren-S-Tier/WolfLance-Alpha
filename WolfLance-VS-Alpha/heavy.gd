@@ -13,7 +13,7 @@ export var attack = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	get_node("%frogPlayer").play("Flex")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,10 +49,18 @@ func _on_Area_area_shape_entered(area_rid, area, area_shape_index, local_shape_i
 func _on_Area2_body_entered(body):
 	if body.is_in_group("Player"):
 		print ("player detected")
-		var railcart = get_node("%railcart")
+		var railcart = body.get_parent()
 		var new_heavy = heavy.instance()
+		print (railcart)
+		print (new_heavy)
 		railcart.add_child(new_heavy)
 		new_heavy.player = body
-		new_heavy.global_transform.origin = body.global_transform.origin + body.transform.basis.z *40
+		new_heavy.global_transform.origin = body.global_transform.origin + body.transform.basis.z *100
 		queue_free()
 		
+
+
+
+
+func _on_frogPlayer_animation_finished(anim_name):
+	get_node("%frogPlayer").play("Idle")
